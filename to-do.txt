@@ -1,0 +1,8 @@
+i. criar parte para chat medico e paciente com socket {
+https://www.youtube.com/watch?v=gLfuZrrfKes
+}
+
+ ii. rota para exclusão de user
+ - deve receber o token enviado por email para confirmar o delete
+
+ iii. subir para AWS
