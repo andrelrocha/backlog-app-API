@@ -1,0 +1,225 @@
+name,length,metacritic,excitement,played,genre,playing
+Beyond Good and Evil (ps2/gamecube),11,86,6,false,action/adventure
+Shotgun Mario 64 (N62 mod),0,0,4,false,platform
+Crash (3 volumes from ps1),18,91,6,false,platform
+Fatal Frame II (PS2),10,88,6,false,horror
+Onimusha (PS2),5,89,5,false,action/adventure
+Blood Will Tell (PS2),15,82,4,false,action/adventure
+Okami (PS2),34,93,4,true,action/adventure
+Mafia (PS2),16,87,5,false,action
+Genji - Dawn of Samurai (PS2),7,89,5,false,action
+Persona 4 (PS2),70,90,7,false,rpg
+Lord of the ring - return (PS2),9,86,6,false,action/adventure
+Max Payne 2 (PS2),8,89,5,false,action
+Samurai Western (PS2),5,73,5,false,action
+Way of the Samurai (PS2),4,8,6,false,action/adventure
+Fatal Frame (PS2),8,85,6,false,horror
+Ultimate Spider Man (PS2),5,89,6,false,action/adventure
+Time Splitters 2 (PS2),9,90,7,false,fps
+Smash Bros Brawl (Wii),12,86,6,true,fighting
+AC chronicles china (xbox),6,69,3,true,2d action
+AC chronicles india (xbox),6,63,3,false,2d action
+AC chronicles russia (xbox),6,62,3,false,2d action
+AC Black Flag (xbox),24,88,6,true,action/adventure
+AC Origins (xbox),30,85,6,true,action/adventure
+AC Rogue (xbox),11,73,4,false,action/adventure
+AC Unity (xbox),17,72,4,true,action/adventure
+AC Syndicate (xbox),19,78,4,false,action/adventure
+AC Brotherhood (xbox),16,89,6,true,action/adventure
+AC Revelations (xbox),13,8,8,false,action/adventure
+Batman: Arkham Knight (xbox),17,87,5,true,action/adventure
+Batman: Arkham Asylum (xbox),12,92,5,false,action/adventure
+Batman: Arkham City (xbox),16,94,4,true,action/adventure
+Battlefield 4 (xbox),6,85,7,true,fps
+Call of Juarez gunslinger (xbox),5,82,5,false,fps
+Cuphead (xbox),15,88,9,true,run and gun
+Dark Souls III (xbox),32,9,9,true,souls
+Dead Space 2 (xbox),9,90,9,true,horror/shooter
+Dishonored (xbox),12,88,5,true,stealth
+Doom (xbox),12,87,6,true,fps
+Far Cry Primal (xbox),15,77,4,true,fps/adventure
+Far Cry 5 (xbox),18,82,5,true,fps
+Forza 4 (xbox),14,92,7,true,car
+GTA IV (xbox),28,98,7,true,gta
+Hades (xbox),23,93,7,false,roguelite
+Hellblade Sinua (xbox),8,88,7,true,action/adventure
+High on Life: High on Knife (xbox),3,69,5,false,fps
+High on Life (xbox),10,7,9,true,fps
+Just Cause 3 (xbox),18,74,3,true,action/adventure
+Mass Effect (xbox),17,91,4,true,action/adventure
+Lies of P (xbox) ,31,84,10,true,soulslike
+Metal Gear Rising (xbox),7,83,8,true,action/adventure
+Metro Exodus (xbox),16,85,7,false,fps
+Mirrors Edge Catalyst (xbox),9,74,6,true,platform/action
+Naruto Storm (4 volumes from xbox),45,79,4,true,fighting
+Nier Automatta (xbox),21,89,9,false,action/adventure
+Portal (xbox),3,90,6,true,puzzle
+Red Dead Redemption 2 (xbox),50,97,7,true,open world action
+Sekiro (xbox),30,91,7,true,soulslike
+The Witcher 3 DLC (xbox),25,92,7,true,open world rpg
+Shadow of War (xbox),21,80,5,true,action/adventure
+The Messenger (xbox),12,86,9,true,side scrolling action
+Wolfenstein II (xbox),11,87,7,false,fps
+Yakuza 0 (xbox),32,90,6,true,action/adventure
+Undertale (pc),7,92,10,false,rpg
+Jedi Fallen Order (xbox) ,17,81,8,true,action/adventure
+Blasphemous 2 (xbox),15,85,7,false,metroidvania
+Super Mario Sunshine (gamecube),15,92,6,true,platform
+Castlevania Dracula X chronicles (psp),5,85,5,false,metroidvania
+Chrono Trigger (nds/n64),23,92,7,false,rpg
+Final Fantasy III (snes),17,0,5,true,rpg
+Earthbound (snes),28,0,5,false,rpg
+Zelda link to the past (snes),15,0,5,false,action/adventure
+Megaman X (snes),4,0,5,false,platform/action
+Secret of mana (snes),22,0,5,false,rpg
+Super Mario World (snes),5,0,4,false,platform
+Super Metroid (snes),8,0,8,false,metroidvania
+Super Mario RPG - legend of seven (snes),18,0,4,false,rpg
+Paper Mario (n64),23,93,5,false,rpg
+Pokemon Stadium (n64),11,0,4,false,rpg
+Tony Hawk pro Skater 2 (n64),10,98,6,false,sports
+Zelda Wind Waker (gamecube),29,96,5,false,action/adventure
+Smash Bros Melee (gamecube),10,92,4,false,fighting
+Zelda Twilight Princess (gamecube),38,95,5,false,action/adventure
+Luigi's Mansion (gamecube),7,82,4,false,adventure
+Metroid Fusion (gba),5,92,8,false,metroidvania
+Metroid Zero Mission (gba),5,89,8,false,metroidvania
+Pokemon Emerald (gba),31,88,5,false,rpg
+Pokemon Platinum (nds),35,89,6,false,rpg
+Pokemon SoulSilver (nds),37,92,5,false,rpg
+New Super Mario Bros (nds),7,89,5,true,platform
+Zelda link between worlds (3ds),16,91,6,false,action/adventure
+Zelda majoras mask (3ds),25,89,7,false,action/adventure
+Zelda Ocarina of time 3d (3ds),25,94,9,true,action/adventure
+Super mario 3d land (3ds),7,90,6,true,platform
+Shovel Knight (3ds),7,90,7,false,platform/action
+Pokemon Omega Ruby (3ds),26,83,5,false,rpg
+Metroid Samus Returns (3ds),11,87,8,false,metroidvania
+Sonic Hedgehog 2 (mega drive),2,85,4,true,platform
+Castlevania Symphony of the Knight (ps1),9,93,8,false,metroidvania
+Final Fantasy VII (ps1),37,90,10,true,rpg
+Metal Gear Solid (ps1),12,94,8,true,stealth
+Vagrant Story (ps1),24,92,7,false,rpg
+Yugi oh forbidden memories (ps1),14,84,6,false,card game
+Chrono Cross (ps1),35,94,6,false,rpg
+Crisis Core Final Fantasy VII (psp),19,83,5,false,rpg
+God of War chains of olypus (psp),6,91,7,false,action/adventure
+God of War ghost of sparta (psp),7,90,7,false,action/adventure
+Crash twinsanity (ps2),5,86,7,false,platform
+Devil May Cry 3 (ps2),12,90,6,false,action/adventure
+Sea of Stars (xbox) - NOT OWNED GAMEPASS,28,91,9,true,rpg
+Bully (ps2),15,87,6,false,action/adventure
+God Hand (ps2),13,92,6,false,action
+Guitar Hero II (ps2),9,92,7,true,rythm
+Guitar Hero III (ps2),9,86,6,false,rythm
+Half Life (pc),12,96,8,false,fps
+Kingdom Hearts II (ps2),32,90,7,false,rpg
+Metal Gear Solid 3 (ps2),16,91,6,false,stealth
+Metal Gear Solid 2 (ps2),13,96,7,false,stealth
+Naruto Ultimate Ninja 3 (ps2),5,85,5,false,action
+Prince of Persia: sands of time (ps2),9,92,6,false,action/adventure
+Saint Seiya Hades (ps2),4,0,5,false,action
+Sword of Etheria (ps2),8,0,6,false,action/adventure
+Final Fantasy X (ps2),46,92,6,false,rpg
+God of War (ps2),9,94,8,true,action/adventure
+God of War II (ps2),12,93,7,false,action/adventure
+Ico (ps2),9,90,7,true,action/adventure
+Midnight Club 3 (ps2),21,91,5,true,car
+Ratchet & Clank up your arsenal (ps2),12,91,7,true,action/adventure
+Saint Seiya Sanctuary (ps2),4,73,5,true,fighting
+Resident Evil IV (ps2),16,96,7,false,horror/shooter
+Darkwatch (ps2),6,81,5,false,action/adventure
+JoJo no Kimyou na Bouken: Ougon no Kaze (ps2),0,0,5,false,fighting
+Sengoku Basara Heroes 2 (ps2),42,0,5,false,action/adventure
+Shinobido way of the ninja (ps2),12,71,5,false,stealth
+Yakuza 2 (ps2),19,87,5,false,action/adventure
+Castlevania dawn of sorrow (nds),10,89,6,false,metroidvania
+Zelda Spirit Tracks (nds),20,87,5,false,action/adventure
+Mario Smash Football (gamecube),6,85,7,false,sports
+Metroid Prime (gamecube),14,97,7,false,action/adventure
+Fire Emblem Awakening (3ds),31,92,6,false,rpg
+Pokemon Ultra Sun (3ds),33,84,4,false,rpg
+Zero Escape Virtues Last Reward (3ds),28,88,6,false,visual novel
+SteamWorld Heist (3ds),13,86,5,false,rpg
+Shantae and the Pirate's Curse (3ds),8,86,6,false,metroidvania
+The Binding of Isaac: Rebirth (3ds),6,88,4,false,roguelike
+Gunman Clive 2 (3ds),2,80,6,false,platform/action
+Hotline Miami (pc),5,87,9,true,top down shooter
+Rayman 2: the great scape (ps2),8,90,5,false,platform
+Xenoblade Chronicles (wii),58,92,6,false,rpg
+Castlevania Bloodline (genesis),3,0,5,false,metroidvania
+star fox assault (gamecube),6,82,5,false,action/adventure
+Donkey Kong Return (3ds),11,83,5,false,platform
+F Zero gx (gamecube),9,89,5,false,car/action
+Eternal Darkness (gamecube),13,92,7,false,survival horror
+Legacy of Kain (ps1),12,91,6,false,action/adventure
+Half Life 2 (pc) ,13,96,7,false,fps
+Shadow of Colossus (ps2),7,91,7,false,action/adventure
+Jak and Daxter (ps2),10,90,6,false,action/adventure
+Viewtiful Joe  (ps2),8,93,5,false,action
+Dragon Quest VIII (ps2),62,89,4,false,rpg
+Time Splitters (ps2),2,81,6,false,fps
+Dragon Ball Z Budokai 3 (ps2),12,87,4,false,fighting
+Red Faction (ps2),6,88,5,false,fps
+Shadow of Rome (ps2),19,88,5,false,action
+Nobunaga's Ambition: Iron Triangle (ps2),0,78,4,false,turn base rpg
+Maximo: Ghosts to Glory (ps2),9,87,5,false,action/adventure
+The Warriors (ps2),11,85,3,false,action
+Psi-Ops: The Mindgate Conspiracy (ps2),12,84,4,false,action/adventure
+Valkyrie Profile 2: Silmeria (ps2),43,89,5,false,rpg
+Rygar: The Legendary Adventure (ps2),6,83,3,false,action
+Indigo Prophecy (ps2),8,84,4,false,action/adventure
+Maximo vs Army of Zin,8,83,4,false,action/adventure
+Odin Sphere (ps2),37,84,4,false,rpg
+ATV Offroad Fury 2 (ps2),0,82,6,false,sports
+Sakura Wars: So Long My Love (ps2),22,85,5,false,rpg/visual novel
+Freekstyle (ps2),0,82,6,false,sports
+Dark Cloud (ps2),31,80,5,false,rpg
+ Guilty Gear X (ps2),0,79,7,false,fighting
+Baldur's Gate: Dark Alliance  (ps2),12,87,6,false,rpg
+Armored Core 2 (ps2),11,82,6,false,action
+Alien Hominid (ps2),2,78,7,false,side-scrolling shooter
+NFL Street (ps2),0,88,7,false,sports
+Eternal Poison (ps2),40,91,5,false,rpg
+Kessen III (ps2),30,92,4,false,turn base rpg
+Sly 2: Band of Thieves (ps2),15,9,5,false,stealth/plataform
+Twisted Metal: Black (ps2),4,91,4,false,car/beatup
+Shadow of Destiny (ps2),5,82,4,false,adventure
+Mario Golf (gamecube),8,82,5,false,sports
+Mario Tennis (n64),8,91,5,false,sports
+Mario Power Tennis (gamecube),4,84,5,false,sports
+Tales of Symphonia (gamecube),47,89,5,false,rpg
+P.N. 03 (gamecube),3,93,8,false,action/adventure
+Resident Evil 2 (ps1),6,90,7,false,horror/shooting
+Perfect Dark (n64),9,97,4,false,fps
+I-Ninja (gamecube),8,82,4,false,platform/action
+Conker's Bad Fur Day (n64),11,92,5,false,platform
+Turok: Dinosaur Hunter (n64),8,85,4,false,fps
+Dino Crisis 2 (ps1),6,93,6,false,survival horror
+Tenchu: Stealth Assassins (ps1),7,87,6,false,stealth
+Oddworld: Abe's Exoddus (ps1),15,88,7,false,platform 2d
+Einhander (ps1),3,89,5,false,side-scrolling shooter
+Grandia (ps1),42,89,5,false,rpg
+Parasite Eve II (ps1),12,85,4,false,survival horror
+Alone in The dark (ps1),5,78,4,false,survival horror
+Saiyuki: Journey West (ps1),34,85,5,false,rpg
+Lunar: Silver Star Story (ps1),27,85,5,false,rpg
+Lunar 2: Eternal Blue,36,86,5,false,rpg
+Resident Evil 3: Nemesis (ps1),7,95,7,false,horror/shooting
+Metal Slug X (ps1),1,88,7,false,side-scrolling shooter
+Star Ocean: The Second Story (ps1),40,84,5,false,rpg
+Xenogears (ps1),57,91,5,false,rpg
+Breath of Fire IV (ps1),37,85,5,false,rpg
+Elemental Gearbolt (ps1),1,76,6,false,shooter
+MTX Mototrax (ps2),7,79,5,false,sports
+FIFA Soccer 08 (ps2),0,83,5,false,sports
+NCAA Football 06 (ps2),0,87,5,false,sports
+Dead Space Remastered (xbox),12,89,7,true,horror/shooting
+Tomb Raider (2013) (xbox),12,87,7,false,action/adventure
+Portal 2 (pc),9,95,6,false,puzzle
+Celeste (pc),8,94,6,true,platform
+Axiom Verge (pc),11,89,8,false,metroidvania
+Bastion (pc),6,90,7,false,rpg
+Post Void (pc),2,83,8,false,fps
+Inside (pc),4,93,10,true,puzzle/platform
+Vampire Survivors (pc),13,95,8,false,roguelike
