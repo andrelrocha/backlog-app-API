@@ -4,6 +4,6 @@ CREATE TABLE games (
     length INTEGER,
     metacritic INTEGER,
     excitement INTEGER,
-    genre VARCHAR(255),
-    played BOOLEAN
+    played BOOLEAN,
+    genre VARCHAR(255)
 );

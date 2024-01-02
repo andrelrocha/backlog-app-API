@@ -16,7 +16,7 @@ public class ExcelToCSVConverter {
     public void convertXlsxToCsv() {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("xlsx/gamesbacklog.xlsx");
              var workbook = new XSSFWorkbook(inputStream);
-             var csvWriter = new FileWriter("src/main/resources/csv/gamesbacklog.csv")) {
+             var csvWriter = new FileWriter("src/main/resources/csv/backlog.csv")) {
             // Abre o arquivo de Excel (xlsx) como InputStream
             // Cria um objeto Workbook para manipular o arquivo Excel
             // Prepara um FileWriter para escrever no arquivo CSV
@@ -34,7 +34,7 @@ public class ExcelToCSVConverter {
             }
 
             // Define as colunas relevantes que deseja extrair
-            List<String> relevantColumns = List.of("name", "length", "metacritic", "excitement", "played", "genre", "playing");
+            List<String> relevantColumns = List.of("name", "length", "metacritic", "excitement", "played", "genre");
 
             // Cria uma lista para armazenar os índices das colunas relevantes
             List<Integer> relevantColumnIndexes = new ArrayList<>();
