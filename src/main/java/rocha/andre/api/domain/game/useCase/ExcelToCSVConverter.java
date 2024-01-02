@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class ExcelToCSVConverter {
 
-    public void convertXlsxToCsv() {
+    public String convertXlsxToCsv() {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("xlsx/gamesbacklog.xlsx");
              var workbook = new XSSFWorkbook(inputStream);
              var csvWriter = new FileWriter("src/main/resources/csv/backlog.csv")) {
@@ -99,6 +99,8 @@ public class ExcelToCSVConverter {
                     break;
                 }
             }
+
+            return "DEU TUDO CERTO NO PROCESSO DE CONVERSÃO DE XLSX PARA CSV!!!";
         } catch (IOException e) {
             if (e instanceof FileNotFoundException) {
                 File directory = new File("csv");
@@ -111,6 +113,8 @@ public class ExcelToCSVConverter {
             } else {
                 e.printStackTrace();
             }
+
+            return "Algo deu errado no processo de conversão de xlsx para csv.";
         }
     }
 

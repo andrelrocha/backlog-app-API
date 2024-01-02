@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.game.GameRepository;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,13 @@ public class SaveGamesOnDB {
     @Autowired
     private GameRepository repository;
 
-    public List<Game> saveGamesOnDataBase(List<Game> games) {
+    @Autowired
+    private ConvertCSVinGames convertCSVinGames;
+
+    public List<Game> saveGamesOnDataBase() throws IOException {
+        var games = convertCSVinGames.readGamesFromCSV();
+
+
         var gamesArray = new ArrayList<Game>();
 
         for (Game game : games) {

@@ -1,0 +1,225 @@
+Name,Length,Metacritic,Excitement,Genre,Played
+"Beyond Good and Evil (ps2/gamecube)",11,86,6,"action/adventure",false
+"Shotgun Mario 64 (N62 mod)",0,0,4,"platform",false
+"Crash (3 volumes from ps1)",18,91,6,"platform",false
+"Fatal Frame II (PS2)",10,88,6,"horror",false
+"Onimusha (PS2)",5,89,5,"action/adventure",false
+"Blood Will Tell (PS2)",15,82,4,"action/adventure",false
+"Okami (PS2)",34,93,4,"action/adventure",true
+"Mafia (PS2)",16,87,5,"action",false
+"Genji - Dawn of Samurai (PS2)",7,89,5,"action",false
+"Persona 4 (PS2)",70,90,7,"rpg",false
+"Lord of the ring - return (PS2)",9,86,6,"action/adventure",false
+"Max Payne 2 (PS2)",8,89,5,"action",false
+"Samurai Western (PS2)",5,73,5,"action",false
+"Way of the Samurai (PS2)",4,8,6,"action/adventure",false
+"Fatal Frame (PS2)",8,85,6,"horror",false
+"Ultimate Spider Man (PS2)",5,89,6,"action/adventure",false
+"Time Splitters 2 (PS2)",9,90,7,"fps",false
+"Smash Bros Brawl (Wii)",12,86,6,"fighting",true
+"AC chronicles china (xbox)",6,69,3,"2d action",true
+"AC chronicles india (xbox)",6,63,3,"2d action",false
+"AC chronicles russia (xbox)",6,62,3,"2d action",false
+"AC Black Flag (xbox)",24,88,6,"action/adventure",true
+"AC Origins (xbox)",30,85,6,"action/adventure",true
+"AC Rogue (xbox)",11,73,4,"action/adventure",false
+"AC Unity (xbox)",17,72,4,"action/adventure",true
+"AC Syndicate (xbox)",19,78,4,"action/adventure",false
+"AC Brotherhood (xbox)",16,89,6,"action/adventure",true
+"AC Revelations (xbox)",13,8,8,"action/adventure",false
+"Batman: Arkham Knight (xbox)",17,87,5,"action/adventure",true
+"Batman: Arkham Asylum (xbox)",12,92,5,"action/adventure",false
+"Batman: Arkham City (xbox)",16,94,4,"action/adventure",true
+"Battlefield 4 (xbox)",6,85,7,"fps",true
+"Call of Juarez gunslinger (xbox)",5,82,5,"fps",false
+"Cuphead (xbox)",15,88,9,"run and gun",true
+"Dark Souls III (xbox)",32,9,9,"souls",true
+"Dead Space 2 (xbox)",9,90,9,"horror/shooter",true
+"Dishonored (xbox)",12,88,5,"stealth",true
+"Doom (xbox)",12,87,6,"fps",true
+"Far Cry Primal (xbox)",15,77,4,"fps/adventure",true
+"Far Cry 5 (xbox)",18,82,5,"fps",true
+"Forza 4 (xbox)",14,92,7,"car",true
+"GTA IV (xbox)",28,98,7,"gta",true
+"Hades (xbox)",23,93,7,"roguelite",false
+"Hellblade Sinua (xbox)",8,88,7,"action/adventure",true
+"High on Life: High on Knife (xbox)",3,69,5,"fps",false
+"High on Life (xbox)",10,7,9,"fps",true
+"Just Cause 3 (xbox)",18,74,3,"action/adventure",true
+"Mass Effect (xbox)",17,91,4,"action/adventure",true
+"Lies of P (xbox) ",31,84,10,"soulslike",true
+"Metal Gear Rising (xbox)",7,83,8,"action/adventure",true
+"Metro Exodus (xbox)",16,85,7,"fps",false
+"Mirrors Edge Catalyst (xbox)",9,74,6,"platform/action",true
+"Naruto Storm (4 volumes from xbox)",45,79,4,"fighting",true
+"Nier Automatta (xbox)",21,89,9,"action/adventure",false
+"Portal (xbox)",3,90,6,"puzzle",true
+"Red Dead Redemption 2 (xbox)",50,97,7,"open world action",true
+"Sekiro (xbox)",30,91,7,"soulslike",true
+"The Witcher 3 DLC (xbox)",25,92,7,"open world rpg",true
+"Shadow of War (xbox)",21,80,5,"action/adventure",true
+"The Messenger (xbox)",12,86,9,"side scrolling action",true
+"Wolfenstein II (xbox)",11,87,7,"fps",false
+"Yakuza 0 (xbox)",32,90,6,"action/adventure",true
+"Undertale (pc)",7,92,10,"rpg",false
+"Jedi Fallen Order (xbox) ",17,81,8,"action/adventure",true
+"Blasphemous 2 (xbox)",15,85,7,"metroidvania",false
+"Super Mario Sunshine (gamecube)",15,92,6,"platform",true
+"Castlevania Dracula X chronicles (psp)",5,85,5,"metroidvania",false
+"Chrono Trigger (nds/n64)",23,92,7,"rpg",false
+"Final Fantasy III (snes)",17,0,5,"rpg",true
+"Earthbound (snes)",28,0,5,"rpg",false
+"Zelda link to the past (snes)",15,0,5,"action/adventure",false
+"Megaman X (snes)",4,0,5,"platform/action",false
+"Secret of mana (snes)",22,0,5,"rpg",false
+"Super Mario World (snes)",5,0,4,"platform",false
+"Super Metroid (snes)",8,0,8,"metroidvania",false
+"Super Mario RPG - legend of seven (snes)",18,0,4,"rpg",false
+"Paper Mario (n64)",23,93,5,"rpg",false
+"Pokemon Stadium (n64)",11,0,4,"rpg",false
+"Tony Hawk pro Skater 2 (n64)",10,98,6,"sports",false
+"Zelda Wind Waker (gamecube)",29,96,5,"action/adventure",false
+"Smash Bros Melee (gamecube)",10,92,4,"fighting",false
+"Zelda Twilight Princess (gamecube)",38,95,5,"action/adventure",false
+"Luigi's Mansion (gamecube)",7,82,4,"adventure",false
+"Metroid Fusion (gba)",5,92,8,"metroidvania",false
+"Metroid Zero Mission (gba)",5,89,8,"metroidvania",false
+"Pokemon Emerald (gba)",31,88,5,"rpg",false
+"Pokemon Platinum (nds)",35,89,6,"rpg",false
+"Pokemon SoulSilver (nds)",37,92,5,"rpg",false
+"New Super Mario Bros (nds)",7,89,5,"platform",true
+"Zelda link between worlds (3ds)",16,91,6,"action/adventure",false
+"Zelda majoras mask (3ds)",25,89,7,"action/adventure",false
+"Zelda Ocarina of time 3d (3ds)",25,94,9,"action/adventure",true
+"Super mario 3d land (3ds)",7,90,6,"platform",true
+"Shovel Knight (3ds)",7,90,7,"platform/action",false
+"Pokemon Omega Ruby (3ds)",26,83,5,"rpg",false
+"Metroid Samus Returns (3ds)",11,87,8,"metroidvania",false
+"Sonic Hedgehog 2 (mega drive)",2,85,4,"platform",true
+"Castlevania Symphony of the Knight (ps1)",9,93,8,"metroidvania",false
+"Final Fantasy VII (ps1)",37,90,10,"rpg",true
+"Metal Gear Solid (ps1)",12,94,8,"stealth",true
+"Vagrant Story (ps1)",24,92,7,"rpg",false
+"Yugi oh forbidden memories (ps1)",14,84,6,"card game",false
+"Chrono Cross (ps1)",35,94,6,"rpg",false
+"Crisis Core Final Fantasy VII (psp)",19,83,5,"rpg",false
+"God of War chains of olypus (psp)",6,91,7,"action/adventure",false
+"God of War ghost of sparta (psp)",7,90,7,"action/adventure",false
+"Crash twinsanity (ps2)",5,86,7,"platform",false
+"Devil May Cry 3 (ps2)",12,90,6,"action/adventure",false
+"Sea of Stars (xbox) - NOT OWNED GAMEPASS",28,91,9,"rpg",true
+"Bully (ps2)",15,87,6,"action/adventure",false
+"God Hand (ps2)",13,92,6,"action",false
+"Guitar Hero II (ps2)",9,92,7,"rythm",true
+"Guitar Hero III (ps2)",9,86,6,"rythm",false
+"Half Life (pc)",12,96,8,"fps",false
+"Kingdom Hearts II (ps2)",32,90,7,"rpg",false
+"Metal Gear Solid 3 (ps2)",16,91,6,"stealth",false
+"Metal Gear Solid 2 (ps2)",13,96,7,"stealth",false
+"Naruto Ultimate Ninja 3 (ps2)",5,85,5,"action",false
+"Prince of Persia: sands of time (ps2)",9,92,6,"action/adventure",false
+"Saint Seiya Hades (ps2)",4,0,5,"action",false
+"Sword of Etheria (ps2)",8,0,6,"action/adventure",false
+"Final Fantasy X (ps2)",46,92,6,"rpg",false
+"God of War (ps2)",9,94,8,"action/adventure",true
+"God of War II (ps2)",12,93,7,"action/adventure",false
+"Ico (ps2)",9,90,7,"action/adventure",true
+"Midnight Club 3 (ps2)",21,91,5,"car",true
+"Ratchet & Clank up your arsenal (ps2)",12,91,7,"action/adventure",true
+"Saint Seiya Sanctuary (ps2)",4,73,5,"fighting",true
+"Resident Evil IV (ps2)",16,96,7,"horror/shooter",false
+"Darkwatch (ps2)",6,81,5,"action/adventure",false
+"JoJo no Kimyou na Bouken: Ougon no Kaze (ps2)",0,0,5,"fighting",false
+"Sengoku Basara Heroes 2 (ps2)",42,0,5,"action/adventure",false
+"Shinobido way of the ninja (ps2)",12,71,5,"stealth",false
+"Yakuza 2 (ps2)",19,87,5,"action/adventure",false
+"Castlevania dawn of sorrow (nds)",10,89,6,"metroidvania",false
+"Zelda Spirit Tracks (nds)",20,87,5,"action/adventure",false
+"Mario Smash Football (gamecube)",6,85,7,"sports",false
+"Metroid Prime (gamecube)",14,97,7,"action/adventure",false
+"Fire Emblem Awakening (3ds)",31,92,6,"rpg",false
+"Pokemon Ultra Sun (3ds)",33,84,4,"rpg",false
+"Zero Escape Virtues Last Reward (3ds)",28,88,6,"visual novel",false
+"SteamWorld Heist (3ds)",13,86,5,"rpg",false
+"Shantae and the Pirate's Curse (3ds)",8,86,6,"metroidvania",false
+"The Binding of Isaac: Rebirth (3ds)",6,88,4,"roguelike",false
+"Gunman Clive 2 (3ds)",2,80,6,"platform/action",false
+"Hotline Miami (pc)",5,87,9,"top down shooter",true
+"Rayman 2: the great scape (ps2)",8,90,5,"platform",false
+"Xenoblade Chronicles (wii)",58,92,6,"rpg",false
+"Castlevania Bloodline (genesis)",3,0,5,"metroidvania",false
+"star fox assault (gamecube)",6,82,5,"action/adventure",false
+"Donkey Kong Return (3ds)",11,83,5,"platform",false
+"F Zero gx (gamecube)",9,89,5,"car/action",false
+"Eternal Darkness (gamecube)",13,92,7,"survival horror",false
+"Legacy of Kain (ps1)",12,91,6,"action/adventure",false
+"Half Life 2 (pc) ",13,96,7,"fps",false
+"Shadow of Colossus (ps2)",7,91,7,"action/adventure",false
+"Jak and Daxter (ps2)",10,90,6,"action/adventure",false
+"Viewtiful Joe  (ps2)",8,93,5,"action",false
+"Dragon Quest VIII (ps2)",62,89,4,"rpg",false
+"Time Splitters (ps2)",2,81,6,"fps",false
+"Dragon Ball Z Budokai 3 (ps2)",12,87,4,"fighting",false
+"Red Faction (ps2)",6,88,5,"fps",false
+"Shadow of Rome (ps2)",19,88,5,"action",false
+"Nobunaga's Ambition: Iron Triangle (ps2)",0,78,4,"turn base rpg",false
+"Maximo: Ghosts to Glory (ps2)",9,87,5,"action/adventure",false
+"The Warriors (ps2)",11,85,3,"action",false
+"Psi-Ops: The Mindgate Conspiracy (ps2)",12,84,4,"action/adventure",false
+"Valkyrie Profile 2: Silmeria (ps2)",43,89,5,"rpg",false
+"Rygar: The Legendary Adventure (ps2)",6,83,3,"action",false
+"Indigo Prophecy (ps2)",8,84,4,"action/adventure",false
+"Maximo vs Army of Zin",8,83,4,"action/adventure",false
+"Odin Sphere (ps2)",37,84,4,"rpg",false
+"ATV Offroad Fury 2 (ps2)",0,82,6,"sports",false
+"Sakura Wars: So Long My Love (ps2)",22,85,5,"rpg/visual novel",false
+"Freekstyle (ps2)",0,82,6,"sports",false
+"Dark Cloud (ps2)",31,80,5,"rpg",false
+" Guilty Gear X (ps2)",0,79,7,"fighting",false
+"Baldur's Gate: Dark Alliance  (ps2)",12,87,6,"rpg",false
+"Armored Core 2 (ps2)",11,82,6,"action",false
+"Alien Hominid (ps2)",2,78,7,"side-scrolling shooter",false
+"NFL Street (ps2)",0,88,7,"sports",false
+"Eternal Poison (ps2)",40,91,5,"rpg",false
+"Kessen III (ps2)",30,92,4,"turn base rpg",false
+"Sly 2: Band of Thieves (ps2)",15,9,5,"stealth/plataform",false
+"Twisted Metal: Black (ps2)",4,91,4,"car/beatup",false
+"Shadow of Destiny (ps2)",5,82,4,"adventure",false
+"Mario Golf (gamecube)",8,82,5,"sports",false
+"Mario Tennis (n64)",8,91,5,"sports",false
+"Mario Power Tennis (gamecube)",4,84,5,"sports",false
+"Tales of Symphonia (gamecube)",47,89,5,"rpg",false
+"P.N. 03 (gamecube)",3,93,8,"action/adventure",false
+"Resident Evil 2 (ps1)",6,90,7,"horror/shooting",false
+"Perfect Dark (n64)",9,97,4,"fps",false
+"I-Ninja (gamecube)",8,82,4,"platform/action",false
+"Conker's Bad Fur Day (n64)",11,92,5,"platform",false
+"Turok: Dinosaur Hunter (n64)",8,85,4,"fps",false
+"Dino Crisis 2 (ps1)",6,93,6,"survival horror",false
+"Tenchu: Stealth Assassins (ps1)",7,87,6,"stealth",false
+"Oddworld: Abe's Exoddus (ps1)",15,88,7,"platform 2d",false
+"Einhander (ps1)",3,89,5,"side-scrolling shooter",false
+"Grandia (ps1)",42,89,5,"rpg",false
+"Parasite Eve II (ps1)",12,85,4,"survival horror",false
+"Alone in The dark (ps1)",5,78,4,"survival horror",false
+"Saiyuki: Journey West (ps1)",34,85,5,"rpg",false
+"Lunar: Silver Star Story (ps1)",27,85,5,"rpg",false
+"Lunar 2: Eternal Blue",36,86,5,"rpg",false
+"Resident Evil 3: Nemesis (ps1)",7,95,7,"horror/shooting",false
+"Metal Slug X (ps1)",1,88,7,"side-scrolling shooter",false
+"Star Ocean: The Second Story (ps1)",40,84,5,"rpg",false
+"Xenogears (ps1)",57,91,5,"rpg",false
+"Breath of Fire IV (ps1)",37,85,5,"rpg",false
+"Elemental Gearbolt (ps1)",1,76,6,"shooter",false
+"MTX Mototrax (ps2)",7,79,5,"sports",false
+"FIFA Soccer 08 (ps2)",0,83,5,"sports",false
+"NCAA Football 06 (ps2)",0,87,5,"sports",false
+"Dead Space Remastered (xbox)",12,89,7,"horror/shooting",true
+"Tomb Raider (2013) (xbox)",12,87,7,"action/adventure",false
+"Portal 2 (pc)",9,95,6,"puzzle",false
+"Celeste (pc)",8,94,6,"platform",true
+"Axiom Verge (pc)",11,89,8,"metroidvania",false
+"Bastion (pc)",6,90,7,"rpg",false
+"Post Void (pc)",2,83,8,"fps",false
+"Inside (pc)",4,93,10,"puzzle/platform",true
+"Vampire Survivors (pc)",13,95,8,"roguelike",false

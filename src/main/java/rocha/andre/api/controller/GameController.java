@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.game.useCase.ConvertCSVinGames;
+import rocha.andre.api.domain.game.useCase.ConvertGamesOnDBtoCSV;
 import rocha.andre.api.domain.game.useCase.ExcelToCSVConverter;
 import rocha.andre.api.domain.game.useCase.SaveGamesOnDB;
 
@@ -20,34 +21,26 @@ public class GameController {
     private ExcelToCSVConverter excelToCSVConverter;
 
     @Autowired
-    private ConvertCSVinGames convertCSVinGames;
+    private ConvertGamesOnDBtoCSV convertGamesOnDBtoCSV;
 
     @Autowired
     private SaveGamesOnDB saveGamesOnDB;
 
     @GetMapping("/tocsv")
-    public String excekToCSV() {
-        excelToCSVConverter.convertXlsxToCsv();
-        return "DEU CERTO!";
-    }
-
-    @GetMapping("/printcsv")
-    private List<Game> returnAllGamesAsObject() throws IOException {
-
-        var games = convertCSVinGames.readGamesFromCSV();
-        for(Game game : games) {
-            System.out.println(game);
-        }
-
-        return games;
+    public ResponseEntity excekToCSV() {
+        var string = excelToCSVConverter.convertXlsxToCsv();
+        return ResponseEntity.ok(string);
     }
 
     @GetMapping("/saveondb")
     private ResponseEntity<List<Game>> saveGamesOnDb() throws IOException {
-        var games = convertCSVinGames.readGamesFromCSV();
-
-        var gamesOnDb = saveGamesOnDB.saveGamesOnDataBase(games);
-
+        var gamesOnDb = saveGamesOnDB.saveGamesOnDataBase();
         return ResponseEntity.ok(gamesOnDb);
+    }
+
+    @GetMapping("/fromdbtocsv")
+    public ResponseEntity gamesToXLSX() {
+        var string = convertGamesOnDBtoCSV.convertGamesToCSV();
+        return ResponseEntity.ok(string);
     }
 }
