@@ -1,4 +1,4 @@
-package rocha.andre.api.domain.game.useCase;
+package rocha.andre.api.domain.game.useCase.Sheet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

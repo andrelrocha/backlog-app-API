@@ -11,7 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.Game;
-import rocha.andre.api.domain.game.useCase.*;
+import rocha.andre.api.domain.game.useCase.CRUD.GetAllGamesPageable;
+import rocha.andre.api.domain.game.useCase.CRUD.GetRandomGame;
+import rocha.andre.api.domain.game.useCase.CRUD.ReturnAllGamesUseCase;
+import rocha.andre.api.domain.game.useCase.Sheet.ConvertGamesOnDBtoCSV;
+import rocha.andre.api.domain.game.useCase.Sheet.ExcelToCSVConverter;
+import rocha.andre.api.domain.game.useCase.Sheet.SaveGamesOnDB;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,6 +32,9 @@ public class GameController {
 
     @Autowired
     private GetAllGamesPageable getAllGamesPageable;
+
+    @Autowired
+    private GetRandomGame getRandomGame;
 
     @Autowired
     private SaveGamesOnDB saveGamesOnDB;
@@ -66,5 +74,11 @@ public class GameController {
         var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));
         var gamesPageable = getAllGamesPageable.getGamesPageable(pageable);
         return ResponseEntity.ok(gamesPageable);
+    }
+
+    @GetMapping("/suggestion")
+    public ResponseEntity<GameDTO> suggestionGame() {
+        var game = getRandomGame.suggestionGame();
+        return ResponseEntity.ok(game);
     }
 }

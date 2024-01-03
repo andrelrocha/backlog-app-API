@@ -12,4 +12,15 @@ public interface GameRepository extends JpaRepository<Game, Long> {
             SELECT g FROM Game g
             """)
     Page<Game> findAllGames(Pageable pageable);
+
+    @Query("""
+            SELECT MAX(g.id) FROM Game g
+            """)
+    long findLastId();
+
+    @Query("""
+            SELECT g FROM Game g
+            WHERE g.id = :id
+            """)
+    Game findByIdToHandle(String id);
 }

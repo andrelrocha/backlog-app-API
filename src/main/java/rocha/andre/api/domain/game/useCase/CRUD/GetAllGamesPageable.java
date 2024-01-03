@@ -1,4 +1,4 @@
-package rocha.andre.api.domain.game.useCase;
+package rocha.andre.api.domain.game.useCase.CRUD;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
