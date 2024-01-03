@@ -1,9 +1,13 @@
 package rocha.andre.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.Game;
@@ -20,6 +24,9 @@ public class GameController {
 
     @Autowired
     private ConvertGamesOnDBtoCSV convertGamesOnDBtoCSV;
+
+    @Autowired
+    private GetAllGamesPageable getAllGamesPageable;
 
     @Autowired
     private SaveGamesOnDB saveGamesOnDB;
@@ -49,5 +56,15 @@ public class GameController {
     public ResponseEntity<List<GameDTO>> getAllGames() {
         var games = returnAllGamesUseCase.returnAllGames();
         return ResponseEntity.ok(games);
+    }
+
+    @GetMapping("/pageable")
+    public ResponseEntity<Page<GameDTO>> getGamesPageable(@RequestParam(defaultValue = "0") int page,
+                                                          @RequestParam(defaultValue = "25") int size,
+                                                          @RequestParam(defaultValue = "name") String sortField,
+                                                          @RequestParam(defaultValue = "asc") String sortOrder) {
+        var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));
+        var gamesPageable = getAllGamesPageable.getGamesPageable(pageable);
+        return ResponseEntity.ok(gamesPageable);
     }
 }
