@@ -23,4 +23,10 @@ public interface GameRepository extends JpaRepository<Game, Long> {
             WHERE g.id = :id
             """)
     Game findByIdToHandle(String id);
+
+    @Query("""
+            SELECT g FROM Game g
+            ORDER BY RANDOM() LIMIT 1
+            """)
+    Game findRandomGame();
 }

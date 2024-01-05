@@ -14,21 +14,11 @@ public class GetRandomGame {
     private GameRepository repository;
 
     public GameReturnDTO suggestionGame() {
-        var lastId = repository.findLastId();
+        var gameSuggestion = repository.findRandomGame();
 
-        var random = new Random();
-        long randomId = random.nextInt((int) lastId) + 1;
-
-        var gameExists = repository.existsById(randomId);
-
-        while (!gameExists) {
-            randomId = random.nextInt((int) lastId) + 1;
-
-            gameExists = repository.existsById(randomId);
+        if (gameSuggestion == null) {
+            gameSuggestion = repository.findRandomGame();
         }
-
-        var idSuggestion = String.valueOf(randomId);
-        var gameSuggestion = repository.findByIdToHandle(idSuggestion);
 
         return new GameReturnDTO(gameSuggestion);
     }
