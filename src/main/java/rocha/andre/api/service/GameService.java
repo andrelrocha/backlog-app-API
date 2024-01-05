@@ -15,7 +15,7 @@ public interface GameService {
 
     List<Game> saveGamesOnDb() throws IOException;
 
-    File gamesToCSV() throws IOException;
+    File gamesToXLS() throws IOException;
 
     List<GameDTO> getAllGames();
     GameReturnDTO getGameById(Long id);

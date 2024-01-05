@@ -11,6 +11,7 @@ import rocha.andre.api.domain.game.useCase.CRUD.GetAllGamesPageable;
 import rocha.andre.api.domain.game.useCase.CRUD.GetGameByIDUseCase;
 import rocha.andre.api.domain.game.useCase.CRUD.GetRandomGame;
 import rocha.andre.api.domain.game.useCase.CRUD.ReturnAllGamesUseCase;
+import rocha.andre.api.domain.game.useCase.Sheet.ConvertCSVtoXLS;
 import rocha.andre.api.domain.game.useCase.Sheet.ConvertGamesOnDBtoCSV;
 import rocha.andre.api.domain.game.useCase.Sheet.ExcelToCSVConverter;
 import rocha.andre.api.domain.game.useCase.Sheet.SaveGamesOnDB;
@@ -27,6 +28,9 @@ public class GameServiceImpl implements GameService {
 
     @Autowired
     private ConvertGamesOnDBtoCSV convertGamesOnDBtoCSV;
+
+    @Autowired
+    private ConvertCSVtoXLS convertCSVtoXLS;
 
     @Autowired
     private GetAllGamesPageable getAllGamesPageable;
@@ -56,9 +60,10 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public File gamesToCSV() throws IOException {
+    public File gamesToXLS() throws IOException {
         var csvFile = convertGamesOnDBtoCSV.convertGamesToCSV();
-        return csvFile;
+        var xlsFile = convertCSVtoXLS.convertCSVtoXLS(csvFile);
+        return xlsFile;
     }
 
     @Override

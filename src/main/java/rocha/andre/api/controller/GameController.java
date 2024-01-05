@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.Game;
+import rocha.andre.api.domain.game.useCase.Sheet.ConvertCSVtoXLS;
 import rocha.andre.api.service.GameService;
 
 import java.io.IOException;
@@ -39,25 +40,21 @@ public class GameController {
         return ResponseEntity.ok(games);
     }
 
-    @GetMapping("/fromdbtocsv")
-    public ResponseEntity<Resource> gamesToCSV() throws IOException {
-        try {
-            var csvFile = gameService.gamesToCSV();
-            var path = Paths.get(csvFile.getAbsolutePath());
+    @GetMapping("/downloadbacklog")
+    public ResponseEntity<Resource> gamesToXLS() throws IOException {
+            var xlsFile = gameService.gamesToXLS();
+
+            var path = Paths.get(xlsFile.getAbsolutePath());
             var resource = new ByteArrayResource(Files.readAllBytes(path));
 
             var headers = new HttpHeaders();
-            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=backlogondb.csv");
+            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=backlog.xls");
 
             return ResponseEntity.ok()
                     .headers(headers)
-                    .contentLength(csvFile.length())
+                    .contentLength(xlsFile.length())
                     .contentType(MediaType.parseMediaType("application/octet-stream"))
                     .body(resource);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-        }
     }
 
     @GetMapping
