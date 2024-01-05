@@ -16,6 +16,7 @@ import rocha.andre.api.domain.game.useCase.Sheet.ExcelToCSVConverter;
 import rocha.andre.api.domain.game.useCase.Sheet.SaveGamesOnDB;
 import rocha.andre.api.service.GameService;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -55,9 +56,9 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public String gamesToCSV() {
-        var string = convertGamesOnDBtoCSV.convertGamesToCSV();
-        return string;
+    public File gamesToCSV() throws IOException {
+        var csvFile = convertGamesOnDBtoCSV.convertGamesToCSV();
+        return csvFile;
     }
 
     @Override

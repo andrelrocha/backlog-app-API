@@ -29,4 +29,7 @@ public interface GameRepository extends JpaRepository<Game, Long> {
             ORDER BY RANDOM() LIMIT 1
             """)
     Game findRandomGame();
+
+    @Query("SELECT g FROM Game g ORDER BY g.name ASC")
+    Page<Game> findAllGamesOrderedByName(Pageable pageable);
 }

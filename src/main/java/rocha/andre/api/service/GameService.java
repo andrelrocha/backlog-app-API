@@ -6,6 +6,7 @@ import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.Game;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface GameService {
 
     List<Game> saveGamesOnDb() throws IOException;
 
-    String gamesToCSV();
+    File gamesToCSV() throws IOException;
 
     List<GameDTO> getAllGames();
     GameReturnDTO getGameById(Long id);

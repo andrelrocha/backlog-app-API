@@ -1,9 +1,14 @@
 package rocha.andre.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.game.DTO.GameDTO;
@@ -12,6 +17,8 @@ import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.service.GameService;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 @RestController
@@ -33,9 +40,24 @@ public class GameController {
     }
 
     @GetMapping("/fromdbtocsv")
-    public ResponseEntity gamesToCSV() {
-        var string = gameService.gamesToCSV();
-        return ResponseEntity.ok(string);
+    public ResponseEntity<Resource> gamesToCSV() throws IOException {
+        try {
+            var csvFile = gameService.gamesToCSV();
+            var path = Paths.get(csvFile.getAbsolutePath());
+            var resource = new ByteArrayResource(Files.readAllBytes(path));
+
+            var headers = new HttpHeaders();
+            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=backlogondb.csv");
+
+            return ResponseEntity.ok()
+                    .headers(headers)
+                    .contentLength(csvFile.length())
+                    .contentType(MediaType.parseMediaType("application/octet-stream"))
+                    .body(resource);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
     }
 
     @GetMapping
