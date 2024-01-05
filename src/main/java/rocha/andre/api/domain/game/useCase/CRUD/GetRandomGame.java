@@ -3,6 +3,7 @@ package rocha.andre.api.domain.game.useCase.CRUD;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import rocha.andre.api.domain.game.DTO.GameDTO;
+import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.GameRepository;
 
 import java.util.Random;
@@ -12,7 +13,7 @@ public class GetRandomGame {
     @Autowired
     private GameRepository repository;
 
-    public GameDTO suggestionGame() {
+    public GameReturnDTO suggestionGame() {
         var lastId = repository.findLastId();
 
         var random = new Random();
@@ -29,6 +30,6 @@ public class GetRandomGame {
         var idSuggestion = String.valueOf(randomId);
         var gameSuggestion = repository.findByIdToHandle(idSuggestion);
 
-        return new GameDTO(gameSuggestion);
+        return new GameReturnDTO(gameSuggestion);
     }
 }

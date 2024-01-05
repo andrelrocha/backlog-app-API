@@ -5,8 +5,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.game.DTO.GameDTO;
+import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.game.useCase.CRUD.GetAllGamesPageable;
+import rocha.andre.api.domain.game.useCase.CRUD.GetGameByIDUseCase;
 import rocha.andre.api.domain.game.useCase.CRUD.GetRandomGame;
 import rocha.andre.api.domain.game.useCase.CRUD.ReturnAllGamesUseCase;
 import rocha.andre.api.domain.game.useCase.Sheet.ConvertGamesOnDBtoCSV;
@@ -27,6 +29,9 @@ public class GameServiceImpl implements GameService {
 
     @Autowired
     private GetAllGamesPageable getAllGamesPageable;
+
+    @Autowired
+    private GetGameByIDUseCase getGameByIDUseCase;
 
     @Autowired
     private GetRandomGame getRandomGame;
@@ -62,13 +67,19 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public Page<GameDTO> getGamesPageable(Pageable pageable) {
+    public GameReturnDTO getGameById(Long id) {
+        var game = getGameByIDUseCase.getGameById(id);
+        return game;
+    }
+
+    @Override
+    public Page<GameReturnDTO> getGamesPageable(Pageable pageable) {
         var gamesPageable = getAllGamesPageable.getGamesPageable(pageable);
         return gamesPageable;
     }
 
     @Override
-    public GameDTO suggestionGame() {
+    public GameReturnDTO suggestionGame() {
         var game = getRandomGame.suggestionGame();
         return game;
     }

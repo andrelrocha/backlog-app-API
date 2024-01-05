@@ -5,11 +5,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.game.DTO.GameDTO;
+import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.service.GameService;
 
@@ -46,8 +44,14 @@ public class GameController {
         return ResponseEntity.ok(games);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<GameReturnDTO> getGamesPageable(@PathVariable Long id) {
+        var game = gameService.getGameById(id);
+        return ResponseEntity.ok(game);
+    }
+
     @GetMapping("/pageable")
-    public ResponseEntity<Page<GameDTO>> getGamesPageable(@RequestParam(defaultValue = "0") int page,
+    public ResponseEntity<Page<GameReturnDTO>> getGamesPageable(@RequestParam(defaultValue = "0") int page,
                                                           @RequestParam(defaultValue = "25") int size,
                                                           @RequestParam(defaultValue = "name") String sortField,
                                                           @RequestParam(defaultValue = "asc") String sortOrder) {
@@ -57,7 +61,7 @@ public class GameController {
     }
 
     @GetMapping("/suggestion")
-    public ResponseEntity<GameDTO> suggestionGame() {
+    public ResponseEntity<GameReturnDTO> suggestionGame() {
         var game = gameService.suggestionGame();
         return ResponseEntity.ok(game);
     }

@@ -3,6 +3,7 @@ package rocha.andre.api.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import rocha.andre.api.domain.game.DTO.GameDTO;
+import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.Game;
 
 import java.io.IOException;
@@ -16,8 +17,9 @@ public interface GameService {
     String gamesToCSV();
 
     List<GameDTO> getAllGames();
+    GameReturnDTO getGameById(Long id);
 
-    Page<GameDTO> getGamesPageable(Pageable pageable);
+    Page<GameReturnDTO> getGamesPageable(Pageable pageable);
 
-    GameDTO suggestionGame();
+    GameReturnDTO suggestionGame();
 }
