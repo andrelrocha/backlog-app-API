@@ -6,17 +6,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
+import rocha.andre.api.domain.game.DTO.SystemSecretDTO;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.game.useCase.CRUD.GetAllGamesPageable;
 import rocha.andre.api.domain.game.useCase.CRUD.GetGameByIDUseCase;
 import rocha.andre.api.domain.game.useCase.CRUD.GetRandomGame;
 import rocha.andre.api.domain.game.useCase.CRUD.ReturnAllGamesUseCase;
-import rocha.andre.api.domain.game.useCase.Sheet.ConvertCSVtoXLS;
-import rocha.andre.api.domain.game.useCase.Sheet.ConvertGamesOnDBtoCSV;
-import rocha.andre.api.domain.game.useCase.Sheet.ExcelToCSVConverter;
-import rocha.andre.api.domain.game.useCase.Sheet.SaveGamesOnDB;
+import rocha.andre.api.domain.game.useCase.Sheet.*;
 import rocha.andre.api.service.GameService;
 
+import javax.security.sasl.AuthenticationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -42,6 +41,9 @@ public class GameServiceImpl implements GameService {
     private GetRandomGame getRandomGame;
 
     @Autowired
+    private ValidSystemKey validSystemKey;
+
+    @Autowired
     private SaveGamesOnDB saveGamesOnDB;
 
     @Autowired
@@ -60,7 +62,10 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public File gamesToXLS() throws IOException {
+    public File gamesToXLS(SystemSecretDTO dto) throws Exception {
+        //authenticating system's admin
+        validSystemKey.isSystemKeyValid(dto);
+
         var csvFile = convertGamesOnDBtoCSV.convertGamesToCSV();
         var xlsFile = convertCSVtoXLS.convertCSVtoXLS(csvFile);
         return xlsFile;

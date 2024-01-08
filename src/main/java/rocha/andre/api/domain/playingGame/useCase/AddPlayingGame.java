@@ -27,6 +27,8 @@ public class AddPlayingGame {
 
         var playingGameOnDB = playingGameRepository.save(playingGame);
 
+        game.isPlayed();
+
         return new PlayingGameReturnDTO(playingGameOnDB);
     }
 }
