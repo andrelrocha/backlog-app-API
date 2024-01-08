@@ -12,16 +12,15 @@ import java.io.IOException;
 import java.util.List;
 
 public interface GameService {
-    String excelToCSV();
-
-    List<Game> saveGamesOnDb() throws IOException;
-
-    File gamesToXLS(SystemSecretDTO dto) throws Exception;
-
+    //CRUD
+    GameReturnDTO createGame(GameDTO data);
     List<GameDTO> getAllGames();
     GameReturnDTO getGameById(Long id);
-
     Page<GameReturnDTO> getGamesPageable(Pageable pageable);
-
     GameReturnDTO suggestionGame();
+
+    //SHEET API
+    String excelToCSV();
+    File gamesToXLS(SystemSecretDTO dto) throws Exception;
+    List<Game> saveGamesOnDb() throws IOException;
 }

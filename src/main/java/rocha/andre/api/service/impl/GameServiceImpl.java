@@ -8,10 +8,7 @@ import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.game.DTO.SystemSecretDTO;
 import rocha.andre.api.domain.game.Game;
-import rocha.andre.api.domain.game.useCase.CRUD.GetAllGamesPageable;
-import rocha.andre.api.domain.game.useCase.CRUD.GetGameByIDUseCase;
-import rocha.andre.api.domain.game.useCase.CRUD.GetRandomGame;
-import rocha.andre.api.domain.game.useCase.CRUD.ReturnAllGamesUseCase;
+import rocha.andre.api.domain.game.useCase.CRUD.*;
 import rocha.andre.api.domain.game.useCase.Sheet.*;
 import rocha.andre.api.service.GameService;
 
@@ -22,6 +19,8 @@ import java.util.List;
 
 @Service
 public class GameServiceImpl implements GameService {
+    @Autowired
+    private CreateGameUseCase createGameUseCase;
     @Autowired
     private ExcelToCSVConverter excelToCSVConverter;
 
@@ -69,6 +68,12 @@ public class GameServiceImpl implements GameService {
         var csvFile = convertGamesOnDBtoCSV.convertGamesToCSV();
         var xlsFile = convertCSVtoXLS.convertCSVtoXLS(csvFile);
         return xlsFile;
+    }
+
+    @Override
+    public GameReturnDTO createGame(GameDTO data) {
+        var game = createGameUseCase.createGame(data);
+        return game;
     }
 
     @Override

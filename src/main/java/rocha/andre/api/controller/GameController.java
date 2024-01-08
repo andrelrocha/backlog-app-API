@@ -59,6 +59,13 @@ public class GameController {
                     .body(resource);
     }
 
+    //CRUD
+    @PostMapping("/create")
+    public ResponseEntity<GameReturnDTO> createGame(@RequestBody GameDTO dto) {
+        var game = gameService.createGame(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(game);
+    }
+
     @GetMapping
     public ResponseEntity<List<GameDTO>> getAllGames() {
         var games = gameService.getAllGames();
