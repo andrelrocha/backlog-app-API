@@ -14,6 +14,6 @@ public class GetAllGamesPageable {
     private GameRepository repository;
 
     public Page<GameReturnDTO> getGamesPageable(Pageable pageable) {
-        return repository.findAllGamesOrderedByName(pageable).map(GameReturnDTO::new);
+        return repository.findAllGames(pageable).map(GameReturnDTO::new);
     }
 }

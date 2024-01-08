@@ -32,4 +32,5 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 
     @Query("SELECT g FROM Game g ORDER BY g.name ASC")
     Page<Game> findAllGamesOrderedByName(Pageable pageable);
+
 }
