@@ -100,4 +100,10 @@ public class GameController {
         var game = gameService.updateGame(data, gameId);
         return ResponseEntity.ok(game);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteGame(@PathVariable long id) {
+        gameService.deleteGame(id);
+        return ResponseEntity.noContent().build();
+    }
 }

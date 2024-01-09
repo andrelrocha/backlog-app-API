@@ -15,6 +15,7 @@ import java.util.List;
 public interface GameService {
     //CRUD
     GameReturnDTO createGame(GameDTO data);
+    void deleteGame(Long id);
     List<GameDTO> getAllGames();
     GameReturnDTO getGameById(Long id);
     Page<GameReturnDTO> getGamesPageable(Pageable pageable);

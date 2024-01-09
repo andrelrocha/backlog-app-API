@@ -32,6 +32,9 @@ public class GameServiceImpl implements GameService {
     private ConvertCSVtoXLS convertCSVtoXLS;
 
     @Autowired
+    private DeleteGameUseCase deleteGameUseCase;
+
+    @Autowired
     private GetAllGamesPageable getAllGamesPageable;
 
     @Autowired
@@ -77,6 +80,11 @@ public class GameServiceImpl implements GameService {
     public GameReturnDTO createGame(GameDTO data) {
         var game = createGameUseCase.createGame(data);
         return game;
+    }
+
+    @Override
+    public void deleteGame(Long id) {
+        deleteGameUseCase.deleteGame(id);
     }
 
     @Override
