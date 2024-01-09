@@ -1,9 +1,11 @@
 package rocha.andre.api.infra.security;
 
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.user.User;
@@ -31,6 +33,22 @@ public class TokenService {
             return token;
         } catch (JWTCreationException exception){
             throw new RuntimeException("Error while generating JWT token", exception);
+        }
+    }
+
+    public boolean isJwtTokenValid(TokenJwtDto tokenJwt) {
+        try {
+            Algorithm algorithm = Algorithm.HMAC256(secret);
+            JWTVerifier verifier = JWT.require(algorithm)
+                    .withIssuer("andre rocha")
+                    .build();
+
+            DecodedJWT jwt = verifier.verify(tokenJwt.token());
+
+            return true;
+        } catch (JWTVerificationException | IllegalArgumentException exception) {
+            // IllegalArgumentException é lançada se o tokenJwt for nulo ou vazio
+            return false;
         }
     }
 
