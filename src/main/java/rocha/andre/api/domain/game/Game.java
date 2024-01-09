@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReadCSVDTO;
+import rocha.andre.api.domain.game.DTO.GameUpdateDTO;
 
 @Table(name = "games")
 @Entity(name = "Game")
@@ -33,6 +34,24 @@ public class Game {
         this.excitement = gameDTO.excitement();
         this.genre = gameDTO.genre();
         this.played = played;
+    }
+
+    public void updateGame(GameDTO dto) {
+        if (dto.name() != null) {
+            this.name = dto.name();
+        }
+        if (dto.length() != 0) {
+            this.length = dto.length();
+        }
+        if (dto.metacritic() != 0) {
+            this.metacritic = dto.metacritic();
+        }
+        if (dto.excitement() != 0) {
+            this.excitement = dto.excitement();
+        }
+        if (dto.genre() != null) {
+            this.genre = dto.genre();
+        }
     }
 
     @Override

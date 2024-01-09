@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
+import rocha.andre.api.domain.game.DTO.GameUpdateDTO;
 import rocha.andre.api.domain.game.DTO.SystemSecretDTO;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.game.useCase.Sheet.ConvertCSVtoXLS;
@@ -91,6 +92,12 @@ public class GameController {
     @GetMapping("/suggestion")
     public ResponseEntity<GameReturnDTO> suggestionGame() {
         var game = gameService.suggestionGame();
+        return ResponseEntity.ok(game);
+    }
+
+    @PutMapping("/edit/{gameId}")
+    public ResponseEntity<GameReturnDTO> updateGame(@RequestBody GameDTO data, @PathVariable String gameId) {
+        var game = gameService.updateGame(data, gameId);
         return ResponseEntity.ok(game);
     }
 }

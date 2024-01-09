@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
+import rocha.andre.api.domain.game.DTO.GameUpdateDTO;
 import rocha.andre.api.domain.game.DTO.SystemSecretDTO;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.game.useCase.CRUD.*;
@@ -38,6 +39,8 @@ public class GameServiceImpl implements GameService {
 
     @Autowired
     private GetRandomGame getRandomGame;
+    @Autowired
+    private UpdateGameUseCase updateGameUseCase;
 
     @Autowired
     private ValidSystemKey validSystemKey;
@@ -92,6 +95,12 @@ public class GameServiceImpl implements GameService {
     public Page<GameReturnDTO> getGamesPageable(Pageable pageable) {
         var gamesPageable = getAllGamesPageable.getGamesPageable(pageable);
         return gamesPageable;
+    }
+
+    @Override
+    public GameReturnDTO updateGame(GameDTO dto, String gameId) {
+        var game = updateGameUseCase.updateGame(dto, gameId);
+        return game;
     }
 
     @Override

@@ -36,14 +36,14 @@ public class TokenService {
         }
     }
 
-    public boolean isJwtTokenValid(TokenJwtDto tokenJwt) {
+    public boolean isJwtTokenValid(String tokenJwt) {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             JWTVerifier verifier = JWT.require(algorithm)
                     .withIssuer("andre rocha")
                     .build();
 
-            DecodedJWT jwt = verifier.verify(tokenJwt.token());
+            DecodedJWT jwt = verifier.verify(tokenJwt);
 
             return true;
         } catch (JWTVerificationException | IllegalArgumentException exception) {
