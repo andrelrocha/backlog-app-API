@@ -54,6 +54,10 @@ public class Game {
         }
     }
 
+    public void setPlayed() {
+        this.played = true;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
