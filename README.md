@@ -2,7 +2,7 @@
 
 Backlog API that reads XLSX files, logs them into a database, and provides user-friendly output, with a full CRUD scheme, system of recording which games i'm playing, in addition to conect with third person api's for database tools, regarding data analysis and file backups.
 
-## Documentação API
+## Documentation API
 
 - Run the project by executing ApiApplication
 - Check the visual interface of the documentation at http://localhost:8080/swagger-ui/index.html
@@ -17,13 +17,13 @@ Replace your-project-name.jar with the actual name of your generated JAR file.
 
 ---
 
-## ⚙️ Funcionalidades
+## ⚙️ Functionalities
 
 - [x] TO-DO YET
 
 ---
 
-## 🛠 Tecnologias
+## 🛠 Technologies
 
 The following technologies were used in the development of the REST API project:
 
