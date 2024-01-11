@@ -39,6 +39,8 @@ public class GameServiceImpl implements GameService {
 
     @Autowired
     private GetGameByIDUseCase getGameByIDUseCase;
+    @Autowired
+    private GetGameByNameContains getGameByNameContains;
 
     @Autowired
     private GetRandomGame getRandomGame;
@@ -97,6 +99,12 @@ public class GameServiceImpl implements GameService {
     public GameReturnDTO getGameById(Long id) {
         var game = getGameByIDUseCase.getGameById(id);
         return game;
+    }
+
+    @Override
+    public Page<GameReturnDTO> getGameByNameContains(String nameCompare, Pageable pageable) {
+        var games = getGameByNameContains.getGameByNameContains(nameCompare, pageable);
+        return games;
     }
 
     @Override

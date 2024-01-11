@@ -33,4 +33,9 @@ public interface GameRepository extends JpaRepository<Game, Long> {
     @Query("SELECT g FROM Game g ORDER BY g.name ASC")
     Page<Game> findAllGamesOrderedByName(Pageable pageable);
 
+    @Query("""
+            SELECT g FROM Game g
+            WHERE LOWER(g.name) LIKE LOWER(CONCAT('%', :nameCompare, '%'))
+            """)
+    Page<Game> findGamesByNameContaining(String nameCompare, Pageable pageable);
 }

@@ -18,6 +18,7 @@ public interface GameService {
     void deleteGame(Long id);
     List<GameDTO> getAllGames();
     GameReturnDTO getGameById(Long id);
+    Page<GameReturnDTO> getGameByNameContains(String nameCompare, Pageable pageable);
     Page<GameReturnDTO> getGamesPageable(Pageable pageable);
     GameReturnDTO updateGame(GameDTO dto, String gameId);
     GameReturnDTO suggestionGame();

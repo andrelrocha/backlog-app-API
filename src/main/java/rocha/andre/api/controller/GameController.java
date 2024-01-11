@@ -74,7 +74,7 @@ public class GameController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GameReturnDTO> getGamesPageable(@PathVariable Long id) {
+    public ResponseEntity<GameReturnDTO> getGameById(@PathVariable Long id) {
         var game = gameService.getGameById(id);
         return ResponseEntity.ok(game);
     }
@@ -86,6 +86,17 @@ public class GameController {
                                                           @RequestParam(defaultValue = "asc") String sortOrder) {
         var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));
         var gamesPageable = gameService.getGamesPageable(pageable);
+        return ResponseEntity.ok(gamesPageable);
+    }
+
+    @GetMapping("/searchbyname/{nameCompare}")
+    public ResponseEntity<Page<GameReturnDTO>> getGamesByName(@RequestParam(defaultValue = "0") int page,
+                                                                @RequestParam(defaultValue = "25") int size,
+                                                                @RequestParam(defaultValue = "name") String sortField,
+                                                                @RequestParam(defaultValue = "asc") String sortOrder,
+                                                                @PathVariable String nameCompare) {
+        var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));
+        var gamesPageable = gameService.getGameByNameContains(nameCompare,pageable);
         return ResponseEntity.ok(gamesPageable);
     }
 
