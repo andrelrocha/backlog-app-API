@@ -33,4 +33,10 @@ public class PlayingGameController {
         var gamesPageable = playingGameService.getAllPlayingGames(pageable);
         return ResponseEntity.ok(gamesPageable);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deletePlayingGame(@PathVariable long id) {
+        playingGameService.deletePlayingGame(id);
+        return ResponseEntity.noContent().build();
+    }
 }

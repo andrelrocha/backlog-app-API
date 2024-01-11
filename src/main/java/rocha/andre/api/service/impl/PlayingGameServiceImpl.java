@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameDTO;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameReturnDTO;
 import rocha.andre.api.domain.playingGame.useCase.AddPlayingGame;
+import rocha.andre.api.domain.playingGame.useCase.DeletePlayingGame;
 import rocha.andre.api.domain.playingGame.useCase.GetPlayingGames;
 import rocha.andre.api.service.PlayingGameService;
 
@@ -16,6 +17,8 @@ public class PlayingGameServiceImpl implements PlayingGameService {
     private AddPlayingGame addPlayingGame;
     @Autowired
     private GetPlayingGames getPlayingGames;
+    @Autowired
+    private DeletePlayingGame deletePlayingGame;
 
     @Override
     public PlayingGameReturnDTO addPlayingGame(PlayingGameDTO data) {
@@ -27,5 +30,10 @@ public class PlayingGameServiceImpl implements PlayingGameService {
     public Page<PlayingGameReturnDTO> getAllPlayingGames(Pageable pageable) {
         var playingGames = getPlayingGames.getAllPlayingGames(pageable);
         return playingGames;
+    }
+
+    @Override
+    public void deletePlayingGame(long id) {
+        deletePlayingGame.deletePlayingGame(id);
     }
 }
