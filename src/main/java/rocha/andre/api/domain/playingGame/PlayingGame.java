@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameAddDTO;
+import rocha.andre.api.domain.playingGame.DTO.PlayingGameDTO;
 
 import java.time.LocalDateTime;
 
@@ -30,6 +31,10 @@ public class PlayingGame {
 
     public PlayingGame(PlayingGameAddDTO data) {
         this.game = data.game();
+        this.firstPlayed = data.firstPlayed();
+    }
+
+    public void updatePlayingGame(PlayingGameDTO data) {
         this.firstPlayed = data.firstPlayed();
     }
 }
