@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameDTO;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameReturnDTO;
+import rocha.andre.api.domain.playingGame.DTO.PlayingGameUpdateDTO;
 import rocha.andre.api.service.PlayingGameService;
 
 @RestController
@@ -38,5 +39,11 @@ public class PlayingGameController {
     public ResponseEntity deletePlayingGame(@PathVariable long id) {
         playingGameService.deletePlayingGame(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<PlayingGameReturnDTO> updatePlayingGame(@RequestBody PlayingGameUpdateDTO data) {
+        var updatedGame = playingGameService.updatePlayingGame(data);
+        return ResponseEntity.ok(updatedGame);
     }
 }

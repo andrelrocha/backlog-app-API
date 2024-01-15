@@ -10,4 +10,6 @@ public interface PlayingGameRepository extends JpaRepository<PlayingGame, Long> 
             SELECT pg FROM PlayingGame pg
             """)
     Page<PlayingGame> findAllPlayingGames(Pageable pageable);
+
+    PlayingGame findByGameId(long gameId);
 }

@@ -6,9 +6,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameDTO;
 import rocha.andre.api.domain.playingGame.DTO.PlayingGameReturnDTO;
+import rocha.andre.api.domain.playingGame.DTO.PlayingGameUpdateDTO;
 import rocha.andre.api.domain.playingGame.useCase.AddPlayingGame;
 import rocha.andre.api.domain.playingGame.useCase.DeletePlayingGame;
 import rocha.andre.api.domain.playingGame.useCase.GetPlayingGames;
+import rocha.andre.api.domain.playingGame.useCase.UpdatePlayingGameUseCase;
 import rocha.andre.api.service.PlayingGameService;
 
 @Component
@@ -19,6 +21,8 @@ public class PlayingGameServiceImpl implements PlayingGameService {
     private GetPlayingGames getPlayingGames;
     @Autowired
     private DeletePlayingGame deletePlayingGame;
+    @Autowired
+    private UpdatePlayingGameUseCase updatePlayingGameUseCase;
 
     @Override
     public PlayingGameReturnDTO addPlayingGame(PlayingGameDTO data) {
@@ -35,5 +39,11 @@ public class PlayingGameServiceImpl implements PlayingGameService {
     @Override
     public void deletePlayingGame(long id) {
         deletePlayingGame.deletePlayingGame(id);
+    }
+
+    @Override
+    public PlayingGameReturnDTO updatePlayingGame(PlayingGameUpdateDTO data) {
+        var gameUpdated = updatePlayingGameUseCase.updatePlayingGame(data);
+        return gameUpdated;
     }
 }

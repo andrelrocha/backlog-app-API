@@ -4,9 +4,10 @@ import rocha.andre.api.domain.playingGame.PlayingGame;
 
 import java.time.LocalDateTime;
 
-public record PlayingGameReturnDTO(String name, int length, int metacritic, int excitement, String genre, LocalDateTime firstPlayed) {
+public record PlayingGameReturnDTO(Long id, String name, int length, int metacritic, int excitement, String genre, LocalDateTime firstPlayed) {
     public PlayingGameReturnDTO(PlayingGame playingGame) {
         this(
+                playingGame.getId(),
                 playingGame.getGame().getName(),
                 playingGame.getGame().getLength(),
                 playingGame.getGame().getMetacritic(),
