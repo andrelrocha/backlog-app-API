@@ -32,7 +32,7 @@ public class GameServiceImpl implements GameService {
     private ConvertCSVtoXLS convertCSVtoXLS;
 
     @Autowired
-    private DeleteGameUseCase deleteGameUseCase;
+    private DoneGameUseCase doneGameUseCase;
 
     @Autowired
     private GetAllGamesPageable getAllGamesPageable;
@@ -85,8 +85,8 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public void deleteGame(Long id) {
-        deleteGameUseCase.deleteGame(id);
+    public void doneGame(Long id) {
+        doneGameUseCase.doneGame(id);
     }
 
     @Override

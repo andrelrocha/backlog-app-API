@@ -60,6 +60,10 @@ public class Game {
         this.played = true;
     }
 
+    public void isDone() {
+        this.done = true;
+    }
+
     @Override
     public String toString() {
         return "Game{" +
