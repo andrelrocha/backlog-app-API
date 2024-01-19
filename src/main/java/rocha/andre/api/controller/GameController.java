@@ -13,14 +13,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.game.DTO.GameDTO;
 import rocha.andre.api.domain.game.DTO.GameReturnDTO;
-import rocha.andre.api.domain.game.DTO.GameUpdateDTO;
 import rocha.andre.api.domain.game.DTO.SystemSecretDTO;
 import rocha.andre.api.domain.game.Game;
-import rocha.andre.api.domain.game.useCase.Sheet.ConvertCSVtoXLS;
 import rocha.andre.api.service.GameService;
 
 import java.io.IOException;
-import java.nio.file.FileSystemException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
