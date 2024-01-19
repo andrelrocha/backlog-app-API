@@ -38,6 +38,9 @@ public class CreateOpinion {
 
         var opinionOnDB = opinionRepository.save(opinion);
 
+        game.isDone();
+        gameRepository.save(game);
+
         return new OpinionReturnDTO(opinionOnDB);
     }
 }
