@@ -26,6 +26,7 @@ public class Game {
     private int excitement;
     private String genre;
     private boolean played;
+    private boolean done;
 
     public Game(GameDTO gameDTO, boolean played) {
         this.name = gameDTO.name();
@@ -34,6 +35,7 @@ public class Game {
         this.excitement = gameDTO.excitement();
         this.genre = gameDTO.genre();
         this.played = played;
+        this.done = false;
     }
 
     public void updateGame(GameDTO dto) {
