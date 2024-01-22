@@ -1,6 +1,7 @@
 ## 💻 About
 
 Backlog API that reads XLSX files, logs them into a database, and provides user-friendly output, with a full CRUD scheme, system of recording which games i'm playing, in addition to conect with third person api's for database tools, regarding data analysis and file backups.
+In addition, it also has a full system to post-backlog maintence system for my opinions on these games, with a full life cycle for those entities.
 
 ## Documentation API
 
