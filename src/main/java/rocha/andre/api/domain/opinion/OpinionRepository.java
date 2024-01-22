@@ -1,5 +1,7 @@
 package rocha.andre.api.domain.opinion;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -13,4 +15,9 @@ public interface OpinionRepository extends JpaRepository<Opinion, Long> {
     boolean gameAlreadyExists(Long gameId);
 
     boolean existsByGameId(long game_id);
+
+    @Query("""
+            SELECT o FROM Opinion o
+            """)
+    Page<Opinion> findAllOpinions(Pageable pageable);
 }
