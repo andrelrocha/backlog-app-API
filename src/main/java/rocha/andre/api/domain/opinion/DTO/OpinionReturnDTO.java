@@ -8,7 +8,9 @@ public record OpinionReturnDTO(
         String console,
         int note,
         String opinion,
-        long gameId
+        long gameId,
+        int metacritic,
+        String genre
 ) {
 
     public OpinionReturnDTO(Opinion opinion) {
@@ -18,7 +20,9 @@ public record OpinionReturnDTO(
                 opinion.getConsole(),
                 opinion.getNote(),
                 opinion.getOpinion(),
-                opinion.getGame().getId()
+                opinion.getGame().getId(),
+                opinion.getMetacritic(),
+                opinion.getGenre()
         );
     }
 }

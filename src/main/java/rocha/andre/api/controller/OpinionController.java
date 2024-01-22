@@ -25,7 +25,7 @@ public class OpinionController {
 
     @GetMapping
     public ResponseEntity<Page<OpinionReturnDTO>> getOpinions(@RequestParam(defaultValue = "0") int page,
-                                                              @RequestParam(defaultValue = "25") int size,
+                                                              @RequestParam(defaultValue = "15") int size,
                                                               @RequestParam(defaultValue = "name") String sortField,
                                                               @RequestParam(defaultValue = "asc") String sortOrder) {
         var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));

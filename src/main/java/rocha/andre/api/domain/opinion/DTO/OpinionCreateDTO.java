@@ -6,8 +6,10 @@ public record OpinionCreateDTO(String name,
                                String console,
                                int note,
                                String opinion,
-                               Game game) {
+                               Game game,
+                               int metacritic,
+                               String genre) {
     public OpinionCreateDTO(OpinionDTO dto, String name, String console, Game game) {
-        this(name, console, dto.note(), dto.opinion(), game);
+        this(name, console, dto.note(), dto.opinion(), game, game.getMetacritic(), game.getGenre());
     }
 }

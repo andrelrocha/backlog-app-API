@@ -26,6 +26,8 @@ public class Opinion {
     @ManyToOne
     @JoinColumn(name = "game_id", referencedColumnName = "id")
     private Game game;
+    private int metacritic;
+    private String genre;
 
     public Opinion(OpinionCreateDTO data) {
         this.name = data.name();
@@ -33,5 +35,7 @@ public class Opinion {
         this.note = data.note();
         this.opinion = data.opinion();
         this.game = data.game();
+        this.metacritic = data.metacritic();
+        this.genre = data.genre();
     }
 }
