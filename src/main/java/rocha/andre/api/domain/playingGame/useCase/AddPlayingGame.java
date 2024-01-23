@@ -28,6 +28,7 @@ public class AddPlayingGame {
         var playingGameOnDB = playingGameRepository.save(playingGame);
 
         game.setPlayed();
+        gameRepository.save(game);
 
         return new PlayingGameReturnDTO(playingGameOnDB);
     }

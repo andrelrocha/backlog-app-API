@@ -8,6 +8,7 @@ import rocha.andre.api.domain.opinion.DTO.OpinionDTO;
 import rocha.andre.api.domain.opinion.DTO.OpinionReturnDTO;
 import rocha.andre.api.domain.opinion.Opinion;
 import rocha.andre.api.domain.opinion.OpinionRepository;
+import rocha.andre.api.domain.playingGame.PlayingGameRepository;
 import rocha.andre.api.infra.exceptions.ValidationException;
 
 @Component
@@ -17,6 +18,8 @@ public class CreateOpinion {
 
     @Autowired
     private GameRepository gameRepository;
+    @Autowired
+    private PlayingGameRepository playingGameRepository;
 
     public OpinionReturnDTO createOpinion(OpinionDTO data) {
         var opinionExists = opinionRepository.existsByGameId(data.gameId());
@@ -40,6 +43,9 @@ public class CreateOpinion {
 
         game.isDone();
         gameRepository.save(game);
+
+        var playingGame = playingGameRepository.findByGameId(game.getId());
+        playingGameRepository.deleteById(playingGame.getId());
 
         return new OpinionReturnDTO(opinionOnDB);
     }
