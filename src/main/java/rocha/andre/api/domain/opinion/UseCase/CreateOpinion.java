@@ -31,7 +31,13 @@ public class CreateOpinion {
         var game = gameRepository.findById(data.gameId())
                 .orElseThrow(() -> new ValidationException("Não foi encontrado jogo com o id informado."));
 
-        String[] parts = game.getName().split("\\s*\\(\\s*");
+        String gameName = game.getName();
+
+        if (!gameName.contains("(") || !gameName.contains(")")) {
+            throw new ValidationException("O nome do jogo deve conter o console em parênteses.");
+        }
+
+        String[] parts = gameName.split("\\s*\\(\\s*");
         String name = parts[0].trim();
         String console = parts[1].replace(")", "").trim();
 
