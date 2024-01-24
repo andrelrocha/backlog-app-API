@@ -9,4 +9,5 @@ public interface OpinionService {
     OpinionReturnDTO createOpinion(OpinionDTO data);
 
     Page<OpinionReturnDTO> getOpinions(Pageable pageable);
+    OpinionReturnDTO getOpinionById(long id);
 }

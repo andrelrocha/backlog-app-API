@@ -32,4 +32,10 @@ public class OpinionController {
         var opinionsPageable = opinionService.getOpinions(pageable);
         return ResponseEntity.ok(opinionsPageable);
     }
+
+    @GetMapping("/byid/{id}")
+    public ResponseEntity<OpinionReturnDTO> getOpinionById(@PathVariable long id) {
+        var opinion = opinionService.getOpinionById(id);
+        return ResponseEntity.ok(opinion);
+    }
 }
