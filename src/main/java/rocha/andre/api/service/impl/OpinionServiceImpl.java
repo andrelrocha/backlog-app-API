@@ -6,9 +6,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.opinion.DTO.OpinionDTO;
 import rocha.andre.api.domain.opinion.DTO.OpinionReturnDTO;
+import rocha.andre.api.domain.opinion.DTO.OpinionUpdateDTO;
 import rocha.andre.api.domain.opinion.UseCase.CreateOpinion;
 import rocha.andre.api.domain.opinion.UseCase.GetOpinionByID;
 import rocha.andre.api.domain.opinion.UseCase.GetOpinions;
+import rocha.andre.api.domain.opinion.UseCase.UpdateOpinion;
 import rocha.andre.api.service.OpinionService;
 
 @Service
@@ -19,6 +21,8 @@ public class OpinionServiceImpl implements OpinionService {
     private GetOpinions getOpinions;
     @Autowired
     private GetOpinionByID getOpinionByID;
+    @Autowired
+    private UpdateOpinion updateOpinion;
 
     public OpinionReturnDTO createOpinion(OpinionDTO data) {
         var opinion = createOpinion.createOpinion(data);
@@ -34,6 +38,12 @@ public class OpinionServiceImpl implements OpinionService {
     @Override
     public OpinionReturnDTO getOpinionById(long id) {
         var opinion = getOpinionByID.getOpinionById(id);
+        return opinion;
+    }
+
+    @Override
+    public OpinionReturnDTO updateOpinion(OpinionUpdateDTO data, long id) {
+        var opinion = updateOpinion.updateOpinion(data, id);
         return opinion;
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.opinion.DTO.OpinionDTO;
 import rocha.andre.api.domain.opinion.DTO.OpinionReturnDTO;
+import rocha.andre.api.domain.opinion.DTO.OpinionUpdateDTO;
 import rocha.andre.api.service.OpinionService;
 
 @RestController
@@ -36,6 +37,12 @@ public class OpinionController {
     @GetMapping("/byid/{id}")
     public ResponseEntity<OpinionReturnDTO> getOpinionById(@PathVariable long id) {
         var opinion = opinionService.getOpinionById(id);
+        return ResponseEntity.ok(opinion);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<OpinionReturnDTO> updateOpinion(@RequestBody OpinionUpdateDTO data, @PathVariable long id) {
+        var opinion = opinionService.updateOpinion(data, id);
         return ResponseEntity.ok(opinion);
     }
 }
