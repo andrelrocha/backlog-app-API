@@ -45,4 +45,10 @@ public class OpinionController {
         var opinion = opinionService.updateOpinion(data, id);
         return ResponseEntity.ok(opinion);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteOpinion(@PathVariable long id) {
+        opinionService.deleteOpinion(id);
+        return ResponseEntity.noContent().build();
+    }
 }

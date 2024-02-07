@@ -7,16 +7,15 @@ import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.opinion.DTO.OpinionDTO;
 import rocha.andre.api.domain.opinion.DTO.OpinionReturnDTO;
 import rocha.andre.api.domain.opinion.DTO.OpinionUpdateDTO;
-import rocha.andre.api.domain.opinion.UseCase.CreateOpinion;
-import rocha.andre.api.domain.opinion.UseCase.GetOpinionByID;
-import rocha.andre.api.domain.opinion.UseCase.GetOpinions;
-import rocha.andre.api.domain.opinion.UseCase.UpdateOpinion;
+import rocha.andre.api.domain.opinion.UseCase.*;
 import rocha.andre.api.service.OpinionService;
 
 @Service
 public class OpinionServiceImpl implements OpinionService {
     @Autowired
     private CreateOpinion createOpinion;
+    @Autowired
+    private DeleteOpinion deleteOpinion;
     @Autowired
     private GetOpinions getOpinions;
     @Autowired
@@ -27,6 +26,11 @@ public class OpinionServiceImpl implements OpinionService {
     public OpinionReturnDTO createOpinion(OpinionDTO data) {
         var opinion = createOpinion.createOpinion(data);
         return opinion;
+    }
+
+    @Override
+    public void deleteOpinion(long id) {
+        deleteOpinion.deleteOpinion(id);
     }
 
     @Override

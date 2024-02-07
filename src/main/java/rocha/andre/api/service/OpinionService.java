@@ -8,6 +8,7 @@ import rocha.andre.api.domain.opinion.DTO.OpinionUpdateDTO;
 
 public interface OpinionService {
     OpinionReturnDTO createOpinion(OpinionDTO data);
+    public void deleteOpinion(long id);
 
     Page<OpinionReturnDTO> getOpinions(Pageable pageable);
     OpinionReturnDTO getOpinionById(long id);
