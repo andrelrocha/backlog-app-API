@@ -23,4 +23,22 @@ public class InfraController {
 
         return true;
     }
+
+    @GetMapping("/oauth")
+    public String handleOAuthResponse(@RequestParam(name = "code", required = false) String authorizationCode,
+                                      @RequestParam(name = "error", required = false) String error,
+                                      @RequestParam(name = "error_description", required = false) String errorDescription,
+                                      @RequestParam(name = "redirect_uri", required = false) String redirectUri) {
+
+        if (error != null) {
+            System.out.println("Falha na autorização: " + error);
+            System.out.println("Descrição do erro: " + errorDescription);
+            return "error";
+        }
+
+        System.out.println("Código de autorização recebido: " + authorizationCode);
+        System.out.println("Redirect URI: " + redirectUri);
+
+        return "success";
+    }
 }
