@@ -2,6 +2,7 @@ package rocha.andre.api.domain.IGDB.useCase;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import rocha.andre.api.domain.IGDB.DTO.CoverResponseDTO;
 
@@ -14,27 +15,35 @@ import java.util.List;
 @Component
 public class GetCoverByGameId {
 
-    public CoverResponseDTO getCover() {
+    //FALTA ADICIONAR A REGRA DE NEGÓCIO DE SER CHAMADA POR OUTRA FUNÇAÕ QUE DESCOBRE O ID A PARTIR DO NOME DO JOGO
+
+    @Value("${igdb.api.url}")
+    private String apiUrl;
+
+    @Value("${igdb.api.authorization}")
+    private String authorization;
+
+    @Value("${igdb.api.client-id}")
+    private String clientId;
+
+    public CoverResponseDTO getCover(String gameId) {
         try {
-            // URL da API
-            URL url = new URL("https://api.igdb.com/v4/covers");
+            var url = new URL(apiUrl);
 
             // Abrindo a conexão
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-            // Configurando o método de requisição
             connection.setRequestMethod("POST");
 
-            // Adicionando cabeçalhos
-            connection.setRequestProperty("Authorization", "Bearer ed6dwvb4ncyac05p8tbuix464zad4u");
-            connection.setRequestProperty("Client-ID", "bzop9nlj40f6s24q3j3hbzyieo27a3");
+            // Headers
+            connection.setRequestProperty("Authorization", authorization);
+            connection.setRequestProperty("Client-ID", clientId);
             connection.setRequestProperty("Content-Type", "application/json");
 
             // Permitindo a escrita no corpo da requisição
             connection.setDoOutput(true);
 
             // Definindo o corpo da requisição
-            String requestBody = "fields alpha_channel,animated,checksum,game,game_localization,height,image_id,url,width; where id='280467';";
+            var requestBody = "fields alpha_channel,animated,checksum,game,game_localization,height,image_id,url,width; where id='" + gameId + "';";
             connection.getOutputStream().write(requestBody.getBytes("UTF-8"));
 
             // Obtendo a resposta
