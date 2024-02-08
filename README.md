@@ -2,6 +2,7 @@
 
 Backlog API that reads XLSX files, logs them into a database, and provides user-friendly output, with a full CRUD scheme, system of recording which games i'm playing, in addition to conect with third person api's for database tools, regarding data analysis and file backups.
 In addition, it also has a full system to post-backlog maintence system for my opinions on these games, with a full life cycle for those entities.
+It has an engine fueled by IGDB API, which is used to save some data about the games, just as they are added to the backlog, also for providing images to the front end app.
 
 ## Documentation API
 
@@ -37,4 +38,5 @@ The following technologies were used in the development of the REST API project:
 - **[Lombok](https://projectlombok.org)**
 - **[ConvertAPI](https://www.convertapi.com/)**
 - **[JWT](https://jwt.io/)**
-- 
+- **[IGDB-API](https://www.igdb.com/api)**
+- **[Jackson](https://github.com/FasterXML/jackson-core)**
