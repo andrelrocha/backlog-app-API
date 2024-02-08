@@ -4,20 +4,19 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import rocha.andre.api.domain.IGDB.DTO.CoverResponseDTO;
+import rocha.andre.api.domain.IGDB.DTO.GameReturnDTO;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class GetCoverByGameId {
-
-    //FALTA ADICIONAR A REGRA DE NEGÓCIO DE SER CHAMADA POR OUTRA FUNÇAÕ QUE DESCOBRE O ID A PARTIR DO NOME DO JOGO
-
-    @Value("${igdb.api.url.covers}")
+public class GetGameIDByGameName {
+    @Value("${igdb.api.url.games}")
     private String apiUrl;
 
     @Value("${igdb.api.authorization}")
@@ -26,12 +25,12 @@ public class GetCoverByGameId {
     @Value("${igdb.api.client-id}")
     private String clientId;
 
-    public CoverResponseDTO getCover(String gameId) {
+    public ArrayList<GameReturnDTO> getGameId(String gameName) {
         try {
             var url = new URL(apiUrl);
 
             // Abrindo a conexão
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            var connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
 
             // Headers
@@ -43,7 +42,8 @@ public class GetCoverByGameId {
             connection.setDoOutput(true);
 
             // Definindo o corpo da requisição
-            var requestBody = "fields alpha_channel,animated,checksum,game,game_localization,height,image_id,url,width; where id='" + gameId + "';";
+            var encodedGameName = URLEncoder.encode(gameName, "UTF-8");
+            var requestBody = "search \"" + encodedGameName + "\"; fields id,name,summary,url;";
             connection.getOutputStream().write(requestBody.getBytes("UTF-8"));
 
             // Obtendo a resposta
@@ -67,15 +67,13 @@ public class GetCoverByGameId {
 
             System.out.println("Resposta da API: " + response.toString());
 
-            // Convertendo a resposta para uma lista de CoverResponseDTO
             var objectMapper = new ObjectMapper();
-            List<CoverResponseDTO> coverResponseDTOs = objectMapper.readValue(response.toString(), new TypeReference<List<CoverResponseDTO>>() {});
-
-            return coverResponseDTOs.get(0);
+            return objectMapper.readValue(response.toString(), new TypeReference<ArrayList<GameReturnDTO>>() {});
 
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Aconteceu um problema no processo de receber a resposta do Cover de um jogo pela API do IGDB.");
         }
     }
+
 }
