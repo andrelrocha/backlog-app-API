@@ -28,4 +28,7 @@ public class IGDBApiController {
         var response = getCoverByGameId.getCover(gameId);
         return ResponseEntity.ok(response);
     }
+
+    //FAZER SISTEMA DE VALIDAÇÃO DE CONFIRMAR O NOME DO JOGO
+    //UMA FUNÇÃO CHAMA A OUTRA, DEVE TER UM SERVICE QUE RECEBA NO BODY DE UM POST O NOME DO JOGO
 }
