@@ -5,6 +5,8 @@ import org.springframework.web.multipart.MultipartFile;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameDTO;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 
+import java.io.IOException;
+
 public interface ImageGameService {
-    ImageGameReturnDTO createImageGame(MultipartFile file, long gameId);
+    ImageGameReturnDTO createImageGame(MultipartFile file, long gameId) throws IOException;
 }

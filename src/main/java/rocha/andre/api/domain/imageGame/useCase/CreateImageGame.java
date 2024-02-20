@@ -8,6 +8,7 @@ import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import rocha.andre.api.domain.imageGame.ImageGame;
 import rocha.andre.api.domain.imageGame.ImageGameRepository;
 import rocha.andre.api.infra.exceptions.ValidationException;
+import rocha.andre.api.infra.utils.imageCompress.ImageUtils;
 
 import java.io.IOException;
 
@@ -41,21 +42,25 @@ public class CreateImageGame {
 
         //var imageGame = new ImageGame(imageBytes, game);
 
+        byte[] compressedImageBytes = ImageUtils.compressImage(dto.imageFile().getBytes());
+
+        if (compressedImageBytes == null) {
+            throw new ValidationException("Erro ao comprimir a imagem. O resultado do método compressImage é nulo.");
+        }
+
         var imageGame = ImageGame.builder()
                 .game(game)
-                .image(ImageUtils.compressImage(dto.imageFile().getBytes()))
-                .type(dto.imageFile().getContentType())
+                .image(compressedImageBytes)
                 .build();
 
         System.out.println("Antes de salvar o jogo");
-        System.out.println("classe image bytes" + imageBytes.getClass());
+        System.out.println("classe image do image game" + imageGame.getImage().getClass());
         System.out.println("classe game" + game.toString());
-
+        System.out.println("classe image game" + imageGame.toString());
 
         var imageGameOnDB = imageGameRepository.save(imageGame);
 
         System.out.println("Depois de salvar o jogo");
-
 
         return new ImageGameReturnDTO(imageGameOnDB);
     }

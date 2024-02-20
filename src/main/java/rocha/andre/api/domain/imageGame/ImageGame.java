@@ -20,8 +20,7 @@ public class ImageGame {
     @JoinColumn(name = "game_id", referencedColumnName = "id")
     private Game game;
 
-    @Lob
-    @Column(name = "image")
+    @Column(name = "image", columnDefinition = "bytea")
     private byte[] image;
 
     public ImageGame(byte[] imageFile, Game game) {
