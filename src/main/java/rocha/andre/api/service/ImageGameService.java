@@ -9,4 +9,6 @@ import java.io.IOException;
 
 public interface ImageGameService {
     ImageGameReturnDTO createImageGame(MultipartFile file, long gameId) throws IOException;
+
+    byte[] returnImage(long gameId) throws Exception;
 }
