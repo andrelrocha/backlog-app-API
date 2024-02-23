@@ -27,4 +27,8 @@ public class ImageGame {
         this.image = imageFile;
         this.game = game;
     }
+
+    public void updateImage(byte[] imageFile) {
+        this.image = imageFile;
+    }
 }
