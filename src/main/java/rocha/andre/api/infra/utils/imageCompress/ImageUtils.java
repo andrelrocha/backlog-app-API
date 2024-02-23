@@ -13,8 +13,6 @@ public class ImageUtils {
     public static final int BITE_SIZE = 4 * 1024;
 
     public static byte[] compressImage(byte[] data) throws IOException {
-        System.out.println("chamou o compressor de img");
-
         Deflater deflater = new Deflater();
         deflater.setLevel(Deflater.BEST_COMPRESSION);
         deflater.setInput(data);
@@ -28,8 +26,6 @@ public class ImageUtils {
         }
 
         outputStream.close();
-
-        System.out.println("chamou compressor de img" + outputStream.toByteArray());
 
         return outputStream.toByteArray();
     }

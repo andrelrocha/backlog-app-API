@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameDTO;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
-import rocha.andre.api.domain.imageGame.useCase.CreateImageGame;
+import rocha.andre.api.domain.imageGame.useCase.AddImageGame;
 import rocha.andre.api.domain.imageGame.useCase.ReturnImageFromGame;
 import rocha.andre.api.service.ImageGameService;
 
@@ -14,14 +14,14 @@ import java.io.IOException;
 @Service
 public class ImageGameServiceImpl implements ImageGameService {
     @Autowired
-    private CreateImageGame createImageGame;
+    private AddImageGame addImageGame;
     @Autowired
     private ReturnImageFromGame returnImageFromGame;
 
     @Override
-    public ImageGameReturnDTO createImageGame(MultipartFile file, long gameId) throws IOException {
+    public ImageGameReturnDTO addImageGame(MultipartFile file, long gameId) throws IOException {
         var ImageGameDTO = new ImageGameDTO(file, gameId);
-        var imageGame = createImageGame.createImageGame(ImageGameDTO);
+        var imageGame = addImageGame.addImageGame(ImageGameDTO);
         return imageGame;
     }
 

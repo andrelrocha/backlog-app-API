@@ -19,7 +19,7 @@ public class ImageGameController {
 
     @PostMapping("/create/{gameId}")
     public ResponseEntity saveImageGame(@RequestPart("file") MultipartFile file, @PathVariable long gameId) throws IOException {
-        var imageGame = imageGameService.createImageGame(file, gameId);
+        var imageGame = imageGameService.addImageGame(file, gameId);
         return ResponseEntity.status(HttpStatus.CREATED).body(imageGame);
     }
 

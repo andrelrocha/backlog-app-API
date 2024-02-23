@@ -8,7 +8,7 @@ import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import java.io.IOException;
 
 public interface ImageGameService {
-    ImageGameReturnDTO createImageGame(MultipartFile file, long gameId) throws IOException;
+    ImageGameReturnDTO addImageGame(MultipartFile file, long gameId) throws IOException;
 
     byte[] returnImage(long gameId) throws Exception;
 }

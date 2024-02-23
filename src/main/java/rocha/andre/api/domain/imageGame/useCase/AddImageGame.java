@@ -16,13 +16,13 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 @Component
-public class CreateImageGame {
+public class AddImageGame {
     @Autowired
     private ImageGameRepository imageGameRepository;
     @Autowired
     private GameRepository gameRepository;
 
-    public ImageGameReturnDTO createImageGame(ImageGameDTO dto) throws IOException {
+    public ImageGameReturnDTO addImageGame(ImageGameDTO dto) throws IOException {
         var game = gameRepository.findById(dto.gameId())
                 .orElseThrow(() -> new ValidationException("Não foi encontrado jogo com o id informado."));
 
