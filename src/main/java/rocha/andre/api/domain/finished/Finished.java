@@ -1,4 +1,4 @@
-package rocha.andre.api.domain.opinion;
+package rocha.andre.api.domain.finished;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,17 +6,16 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import rocha.andre.api.domain.game.Game;
-import rocha.andre.api.domain.opinion.DTO.OpinionCreateDTO;
-import rocha.andre.api.domain.opinion.DTO.OpinionDTO;
-import rocha.andre.api.domain.opinion.DTO.OpinionUpdateDTO;
+import rocha.andre.api.domain.finished.DTO.FinishedCreateDTO;
+import rocha.andre.api.domain.finished.DTO.FinishedUpdateDTO;
 
-@Table(name = "opinions")
-@Entity(name = "Opinion")
+@Table(name = "finished")
+@Entity(name = "Finished")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Opinion {
+public class Finished {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -31,7 +30,7 @@ public class Opinion {
     private int metacritic;
     private String genre;
 
-    public Opinion(OpinionCreateDTO data) {
+    public Finished(FinishedCreateDTO data) {
         this.name = data.name();
         this.console = data.console();
         this.note = data.note();
@@ -41,7 +40,7 @@ public class Opinion {
         this.genre = data.genre();
     }
 
-    public void updateOpinion(OpinionUpdateDTO dto){
+    public void updateFinished (FinishedUpdateDTO dto){
         if (dto.name() != null) {
             this.name = dto.name();
         }

@@ -1,16 +1,16 @@
-package rocha.andre.api.domain.opinion.UseCase;
+package rocha.andre.api.domain.finished.UseCase;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import rocha.andre.api.domain.opinion.OpinionRepository;
+import rocha.andre.api.domain.finished.FinishedRepository;
 import rocha.andre.api.infra.exceptions.ValidationException;
 
 @Component
-public class DeleteOpinion {
+public class DeleteFinished {
     @Autowired
-    private OpinionRepository repository;
+    private FinishedRepository repository;
     
-    public void deleteOpinion(long id) {
+    public void deleteFinished(long id) {
         var opinionExists = repository.existsById(id);
 
         if (!opinionExists) {

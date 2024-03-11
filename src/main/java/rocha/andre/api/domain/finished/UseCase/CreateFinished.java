@@ -1,28 +1,28 @@
-package rocha.andre.api.domain.opinion.UseCase;
+package rocha.andre.api.domain.finished.UseCase;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import rocha.andre.api.domain.game.GameRepository;
-import rocha.andre.api.domain.opinion.DTO.OpinionCreateDTO;
-import rocha.andre.api.domain.opinion.DTO.OpinionDTO;
-import rocha.andre.api.domain.opinion.DTO.OpinionReturnDTO;
-import rocha.andre.api.domain.opinion.Opinion;
-import rocha.andre.api.domain.opinion.OpinionRepository;
+import rocha.andre.api.domain.finished.DTO.FinishedCreateDTO;
+import rocha.andre.api.domain.finished.DTO.FinishedDTO;
+import rocha.andre.api.domain.finished.DTO.FinishedReturnDTO;
+import rocha.andre.api.domain.finished.Finished;
+import rocha.andre.api.domain.finished.FinishedRepository;
 import rocha.andre.api.domain.playingGame.PlayingGameRepository;
 import rocha.andre.api.infra.exceptions.ValidationException;
 
 @Component
-public class CreateOpinion {
+public class CreateFinished {
     @Autowired
-    private OpinionRepository opinionRepository;
+    private FinishedRepository finishedRepository;
 
     @Autowired
     private GameRepository gameRepository;
     @Autowired
     private PlayingGameRepository playingGameRepository;
 
-    public OpinionReturnDTO createOpinion(OpinionDTO data) {
-        var opinionExists = opinionRepository.existsByGameId(data.gameId());
+    public FinishedReturnDTO createFinished (FinishedDTO data) {
+        var opinionExists = finishedRepository.existsByGameId(data.gameId());
 
         if (opinionExists) {
             throw new ValidationException("Já existe uma opinião para o jogo informado.");
@@ -41,11 +41,11 @@ public class CreateOpinion {
         String name = parts[0].trim();
         String console = parts[1].replace(")", "").trim();
 
-        var opinionCreateDTO = new OpinionCreateDTO(data, name, console, game);
+        var opinionCreateDTO = new FinishedCreateDTO(data, name, console, game);
 
-        var opinion = new Opinion(opinionCreateDTO);
+        var opinion = new Finished(opinionCreateDTO);
 
-        var opinionOnDB = opinionRepository.save(opinion);
+        var opinionOnDB = finishedRepository.save(opinion);
 
         game.isDone();
         gameRepository.save(game);
@@ -53,6 +53,6 @@ public class CreateOpinion {
         var playingGame = playingGameRepository.findByGameId(game.getId());
         playingGameRepository.deleteById(playingGame.getId());
 
-        return new OpinionReturnDTO(opinionOnDB);
+        return new FinishedReturnDTO(opinionOnDB);
     }
 }
