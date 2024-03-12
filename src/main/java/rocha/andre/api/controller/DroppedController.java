@@ -47,4 +47,10 @@ public class DroppedController {
         var updatedFinished = droppedService.updateDropped(data, id);
         return ResponseEntity.ok(updatedFinished);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteDropped(@PathVariable long id) {
+        droppedService.deleteDropped(id);
+        return ResponseEntity.noContent().build();
+    }
 }

@@ -7,16 +7,15 @@ import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.dropped.DTO.DroppedDTO;
 import rocha.andre.api.domain.dropped.DTO.DroppedReturnDTO;
 import rocha.andre.api.domain.dropped.DTO.DroppedUpdateDTO;
-import rocha.andre.api.domain.dropped.useCase.AddGameToDropped;
-import rocha.andre.api.domain.dropped.useCase.GetDropped;
-import rocha.andre.api.domain.dropped.useCase.GetDroppedByID;
-import rocha.andre.api.domain.dropped.useCase.UpdateDropped;
+import rocha.andre.api.domain.dropped.useCase.*;
 import rocha.andre.api.service.DroppedService;
 
 @Service
 public class DroppedServiceImpl implements DroppedService {
     @Autowired
     private AddGameToDropped addGameToDropped;
+    @Autowired
+    private DeleteDropped deleteDropped;
     @Autowired
     private GetDropped getDropped;
     @Autowired
@@ -28,6 +27,11 @@ public class DroppedServiceImpl implements DroppedService {
     public DroppedReturnDTO addGameToDropped(DroppedDTO data) {
         var droppedGame = addGameToDropped.addGameToDropped(data);
         return droppedGame;
+    }
+
+    @Override
+    public void deleteDropped(long id) {
+        deleteDropped.deleteDropped(id);
     }
 
     @Override
