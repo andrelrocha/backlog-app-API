@@ -28,6 +28,7 @@ public class Dropped {
     @ManyToOne
     @JoinColumn(name = "game_id", referencedColumnName = "id")
     private Game game;
+    private String genre;
 
     public Dropped(DroppedCreateDTO data) {
         this.name = data.name();
@@ -35,11 +36,16 @@ public class Dropped {
         this.note = data.note();
         this.reason = data.reason();
         this.game = data.game();
+        this.genre = data.genre();
     }
 
     public void updateDropped(DroppedUpdateDTO dto){
         if (dto.name() != null) {
             this.name = dto.name();
+        }
+
+        if (dto.genre() != null) {
+            this.genre = dto.genre();
         }
 
         if (dto.console() != null) {

@@ -1,0 +1,2 @@
+ALTER TABLE dropped
+ADD COLUMN genre VARCHAR(100);
