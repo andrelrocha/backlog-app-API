@@ -9,6 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rocha.andre.api.domain.dropped.DTO.DroppedDTO;
 import rocha.andre.api.domain.dropped.DTO.DroppedReturnDTO;
+import rocha.andre.api.domain.dropped.DTO.DroppedUpdateDTO;
+import rocha.andre.api.domain.finished.DTO.FinishedReturnDTO;
+import rocha.andre.api.domain.finished.DTO.FinishedUpdateDTO;
 import rocha.andre.api.service.DroppedService;
 
 @RestController
@@ -37,5 +40,11 @@ public class DroppedController {
     public ResponseEntity<DroppedReturnDTO> getDroppedGameById(@PathVariable long id) {
         var droppedGame = droppedService.getDroppedById(id);
         return ResponseEntity.ok(droppedGame);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<DroppedReturnDTO> updateDropped(@RequestBody DroppedUpdateDTO data, @PathVariable long id) {
+        var updatedFinished = droppedService.updateDropped(data, id);
+        return ResponseEntity.ok(updatedFinished);
     }
 }

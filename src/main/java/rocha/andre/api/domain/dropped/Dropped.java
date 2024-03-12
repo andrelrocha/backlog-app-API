@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import rocha.andre.api.domain.dropped.DTO.DroppedCreateDTO;
+import rocha.andre.api.domain.dropped.DTO.DroppedUpdateDTO;
 import rocha.andre.api.domain.game.Game;
 import rocha.andre.api.domain.dropped.DTO.DroppedDTO;
 
@@ -36,9 +37,7 @@ public class Dropped {
         this.game = data.game();
     }
 
-
-    /*
-    public void updateDropped(DroppedDTO dto){
+    public void updateDropped(DroppedUpdateDTO dto){
         if (dto.name() != null) {
             this.name = dto.name();
         }
@@ -55,6 +54,5 @@ public class Dropped {
             this.reason = dto.reason();
         }
     }
-     */
 }
 

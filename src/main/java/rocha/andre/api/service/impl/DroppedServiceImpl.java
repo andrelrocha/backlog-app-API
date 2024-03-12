@@ -6,9 +6,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import rocha.andre.api.domain.dropped.DTO.DroppedDTO;
 import rocha.andre.api.domain.dropped.DTO.DroppedReturnDTO;
+import rocha.andre.api.domain.dropped.DTO.DroppedUpdateDTO;
 import rocha.andre.api.domain.dropped.useCase.AddGameToDropped;
 import rocha.andre.api.domain.dropped.useCase.GetDropped;
 import rocha.andre.api.domain.dropped.useCase.GetDroppedByID;
+import rocha.andre.api.domain.dropped.useCase.UpdateDropped;
 import rocha.andre.api.service.DroppedService;
 
 @Service
@@ -19,6 +21,8 @@ public class DroppedServiceImpl implements DroppedService {
     private GetDropped getDropped;
     @Autowired
     private GetDroppedByID getDroppedByID;
+    @Autowired
+    private UpdateDropped updateDropped;
 
     @Override
     public DroppedReturnDTO addGameToDropped(DroppedDTO data) {
@@ -36,5 +40,11 @@ public class DroppedServiceImpl implements DroppedService {
     public DroppedReturnDTO getDroppedById(long id) {
         var droppedGame = getDroppedByID.getDroppedById(id);
         return droppedGame;
+    }
+
+    @Override
+    public DroppedReturnDTO updateDropped(DroppedUpdateDTO data, long id) {
+        var droppedUpdated = updateDropped.updateDropped(data, id);
+        return droppedUpdated;
     }
 }
