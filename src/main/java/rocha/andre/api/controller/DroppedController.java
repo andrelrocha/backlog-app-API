@@ -32,4 +32,10 @@ public class DroppedController {
         var droppedGamesPageable = droppedService.getDroppedGames(pageable);
         return ResponseEntity.ok(droppedGamesPageable);
     }
+
+    @GetMapping("/byid/{id}")
+    public ResponseEntity<DroppedReturnDTO> getDroppedGameById(@PathVariable long id) {
+        var droppedGame = droppedService.getDroppedById(id);
+        return ResponseEntity.ok(droppedGame);
+    }
 }

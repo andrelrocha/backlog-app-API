@@ -13,7 +13,7 @@ import rocha.andre.api.domain.finished.DTO.FinishedUpdateDTO;
 import rocha.andre.api.service.FinishedService;
 
 @RestController
-@RequestMapping("/opinions")
+@RequestMapping("/finished")
 public class FinishedController {
     @Autowired
     private FinishedService finishedService;

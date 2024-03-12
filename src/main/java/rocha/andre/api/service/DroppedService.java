@@ -8,4 +8,5 @@ import rocha.andre.api.domain.dropped.DTO.DroppedReturnDTO;
 public interface DroppedService {
     DroppedReturnDTO addGameToDropped(DroppedDTO data);
     Page<DroppedReturnDTO> getDroppedGames(Pageable pageable);
+    DroppedReturnDTO getDroppedById(long id);
 }
