@@ -1,20 +1,29 @@
 package rocha.andre.api.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameDTO;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import rocha.andre.api.domain.imageGame.useCase.AddImageGame;
+import rocha.andre.api.domain.imageGame.useCase.ReturnAllImageGamesID;
+import rocha.andre.api.domain.imageGame.useCase.ReturnAllImageGamesPageable;
 import rocha.andre.api.domain.imageGame.useCase.ReturnImageFromGame;
 import rocha.andre.api.service.ImageGameService;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @Service
 public class ImageGameServiceImpl implements ImageGameService {
     @Autowired
     private AddImageGame addImageGame;
+    @Autowired
+    private ReturnAllImageGamesID returnAllImageGamesID;
+    @Autowired
+    private ReturnAllImageGamesPageable returnAllImageGamesPageable;
     @Autowired
     private ReturnImageFromGame returnImageFromGame;
 
@@ -29,5 +38,17 @@ public class ImageGameServiceImpl implements ImageGameService {
     public byte[] returnImage(long gameId) throws Exception {
         var imageDecompressed = returnImageFromGame.returnImage(gameId);
         return imageDecompressed;
+    }
+
+    @Override
+    public ArrayList<Long> returnAllIds() {
+        var allId = returnAllImageGamesID.returnAllIds();
+        return allId;
+    }
+
+    @Override
+    public Page<ImageGameReturnDTO> returnAllImages(Pageable pageable) {
+        var imageGamesDTO = returnAllImageGamesPageable.returnAllImages(pageable);
+        return imageGamesDTO;
     }
 }

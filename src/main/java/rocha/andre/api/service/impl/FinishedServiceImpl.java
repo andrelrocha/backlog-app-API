@@ -19,6 +19,8 @@ public class FinishedServiceImpl implements FinishedService {
     @Autowired
     private GetFinished getFinished;
     @Autowired
+    private GetFinishedByGameID getFinishedByGameID;
+    @Autowired
     private GetFinishedByID getFinishedByID;
     @Autowired
     private UpdateFinished updateFinished;
@@ -43,6 +45,12 @@ public class FinishedServiceImpl implements FinishedService {
     public FinishedReturnDTO getFinishedById(long id) {
         var finishedById = getFinishedByID.getFinishedById(id);
         return finishedById;
+    }
+
+    @Override
+    public FinishedReturnDTO getFinishedByGameId(long gameId) {
+        var finishedByGameId = getFinishedByGameID.getFinishedByGameId(gameId);
+        return finishedByGameId;
     }
 
     @Override

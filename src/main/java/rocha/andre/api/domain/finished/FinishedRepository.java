@@ -20,4 +20,6 @@ public interface FinishedRepository extends JpaRepository<Finished, Long> {
             SELECT f FROM Finished f
             """)
     Page<Finished> findAllFinished(Pageable pageable);
+
+    Finished findByGameId(long game_id);
 }

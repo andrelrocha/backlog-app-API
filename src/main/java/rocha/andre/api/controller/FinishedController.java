@@ -40,6 +40,12 @@ public class FinishedController {
         return ResponseEntity.ok(finishedById);
     }
 
+    @GetMapping("/bygameid/{gameid}")
+    public ResponseEntity<FinishedReturnDTO> getFinishedByGameId(@PathVariable long gameid) {
+        var finishedByGameId = finishedService.getFinishedByGameId(gameid);
+        return ResponseEntity.ok(finishedByGameId);
+    }
+
     @PutMapping("/update/{id}")
     public ResponseEntity<FinishedReturnDTO> updateFinished(@RequestBody FinishedUpdateDTO data, @PathVariable long id) {
         var updatedFinished = finishedService.updateFinished(data, id);

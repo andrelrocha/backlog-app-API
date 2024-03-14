@@ -1,15 +1,21 @@
 package rocha.andre.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import rocha.andre.api.domain.finished.DTO.FinishedReturnDTO;
+import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import rocha.andre.api.service.ImageGameService;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/image")
@@ -31,5 +37,21 @@ public class ImageGameController {
         headers.setContentType(MediaType.IMAGE_JPEG);
 
         return ResponseEntity.ok().headers(headers).body(imageDecompressed);
+    }
+
+    @GetMapping("/allgamesid")
+    public ResponseEntity<ArrayList<Long>> returnAllGameIds() {
+        var allId = imageGameService.returnAllIds();
+        return ResponseEntity.ok(allId);
+    }
+
+    @GetMapping("/allgameimages")
+    public ResponseEntity<Page<ImageGameReturnDTO>> getAllImageGames(@RequestParam(defaultValue = "0") int page,
+                                                                     @RequestParam(defaultValue = "6") int size,
+                                                                     @RequestParam(defaultValue = "gameId") String sortField,
+                                                                     @RequestParam(defaultValue = "asc") String sortOrder) {
+        var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));
+        var allImagesPageable = imageGameService.returnAllImages(pageable);
+        return ResponseEntity.ok(allImagesPageable);
     }
 }

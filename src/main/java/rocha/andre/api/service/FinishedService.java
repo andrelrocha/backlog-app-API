@@ -12,6 +12,7 @@ public interface FinishedService {
 
     Page<FinishedReturnDTO> getFinished(Pageable pageable);
     FinishedReturnDTO getFinishedById(long id);
+    public FinishedReturnDTO getFinishedByGameId(long gameId);
 
     FinishedReturnDTO updateFinished(FinishedUpdateDTO data, long id);
 }
