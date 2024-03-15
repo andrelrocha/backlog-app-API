@@ -4,6 +4,7 @@ Backlog API that reads XLSX files, logs them into a database, and provides user-
 In addition, it also has a full system to post-backlog maintence system for my opinions on these games, with a full life cycle for those entities.
 It has all its endpoints mapped in REST standard, for easy connection with different front-end applications, regardless of the technology used.
 It has an engine fueled by IGDB API, which is used to save some data about the games, just as they are added to the backlog, also for providing images to the front end app.
+
 Check out its usage on a frontend app: https://youtu.be/5CtG81bCaYc [Demo de um App para gerenciar meu backlog]
 
 ## Documentation API
