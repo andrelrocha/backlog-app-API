@@ -1,6 +1,5 @@
 Name,Length,Metacritic,Excitement,Genre,Played
 "Beyond Good and Evil (ps2/gamecube)",11,86,6,"action/adventure",false
-"Shotgun Mario 64 (N62 mod)",0,0,4,"platform",false
 "Crash (3 volumes from ps1)",18,91,6,"platform",false
 "Fatal Frame II (PS2)",10,88,6,"horror",false
 "Onimusha (PS2)",5,89,5,"action/adventure",false
@@ -8,7 +7,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Okami (PS2)",34,93,4,"action/adventure",true
 "Mafia (PS2)",16,87,5,"action",false
 "Genji - Dawn of Samurai (PS2)",7,89,5,"action",false
-"Persona 4 (PS2)",70,90,7,"rpg",false
 "Lord of the ring - return (PS2)",9,86,6,"action/adventure",false
 "Max Payne 2 (PS2)",8,89,5,"action",false
 "Samurai Western (PS2)",5,73,5,"action",false
@@ -23,7 +21,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "AC Black Flag (xbox)",24,88,6,"action/adventure",true
 "AC Origins (xbox)",30,85,6,"action/adventure",true
 "AC Rogue (xbox)",11,73,4,"action/adventure",false
-"AC Unity (xbox)",17,72,4,"action/adventure",true
 "AC Syndicate (xbox)",19,78,4,"action/adventure",false
 "AC Brotherhood (xbox)",16,89,6,"action/adventure",true
 "AC Revelations (xbox)",13,8,8,"action/adventure",false
@@ -33,10 +30,8 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Battlefield 4 (xbox)",6,85,7,"fps",true
 "Call of Juarez gunslinger (xbox)",5,82,5,"fps",false
 "Cuphead (xbox)",15,88,9,"run and gun",true
-"Dark Souls III (xbox)",32,9,9,"souls",true
 "Dead Space 2 (xbox)",9,90,9,"horror/shooter",true
 "Dishonored (xbox)",12,88,5,"stealth",true
-"Doom (xbox)",12,87,6,"fps",true
 "Far Cry Primal (xbox)",15,77,4,"fps/adventure",true
 "Far Cry 5 (xbox)",18,82,5,"fps",true
 "Forza 4 (xbox)",14,92,7,"car",true
@@ -46,7 +41,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "High on Life: High on Knife (xbox)",3,69,5,"fps",false
 "High on Life (xbox)",10,7,9,"fps",true
 "Just Cause 3 (xbox)",18,74,3,"action/adventure",true
-"Mass Effect (xbox)",17,91,4,"action/adventure",true
 "Lies of P (xbox) ",31,84,10,"soulslike",true
 "Metal Gear Rising (xbox)",7,83,8,"action/adventure",true
 "Metro Exodus (xbox)",16,85,7,"fps",false
@@ -58,24 +52,18 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Sekiro (xbox)",30,91,7,"soulslike",true
 "The Witcher 3 DLC (xbox)",25,92,7,"open world rpg",true
 "Shadow of War (xbox)",21,80,5,"action/adventure",true
-"The Messenger (xbox)",12,86,9,"side scrolling action",true
 "Wolfenstein II (xbox)",11,87,7,"fps",false
 "Yakuza 0 (xbox)",32,90,6,"action/adventure",true
-"Undertale (pc)",7,92,10,"rpg",false
 "Jedi Fallen Order (xbox) ",17,81,8,"action/adventure",true
 "Blasphemous 2 (xbox)",15,85,7,"metroidvania",false
 "Super Mario Sunshine (gamecube)",15,92,6,"platform",true
 "Castlevania Dracula X chronicles (psp)",5,85,5,"metroidvania",false
-"Chrono Trigger (nds/n64)",23,92,7,"rpg",false
-"Final Fantasy III (snes)",17,0,5,"rpg",true
-"Earthbound (snes)",28,0,5,"rpg",false
 "Zelda link to the past (snes)",15,0,5,"action/adventure",false
 "Megaman X (snes)",4,0,5,"platform/action",false
 "Secret of mana (snes)",22,0,5,"rpg",false
 "Super Mario World (snes)",5,0,4,"platform",false
 "Super Metroid (snes)",8,0,8,"metroidvania",false
 "Super Mario RPG - legend of seven (snes)",18,0,4,"rpg",false
-"Paper Mario (n64)",23,93,5,"rpg",false
 "Pokemon Stadium (n64)",11,0,4,"rpg",false
 "Tony Hawk pro Skater 2 (n64)",10,98,6,"sports",false
 "Zelda Wind Waker (gamecube)",29,96,5,"action/adventure",false
@@ -83,18 +71,28 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Zelda Twilight Princess (gamecube)",38,95,5,"action/adventure",false
 "Luigi's Mansion (gamecube)",7,82,4,"adventure",false
 "Metroid Fusion (gba)",5,92,8,"metroidvania",false
-"Metroid Zero Mission (gba)",5,89,8,"metroidvania",false
 "Pokemon Emerald (gba)",31,88,5,"rpg",false
 "Pokemon Platinum (nds)",35,89,6,"rpg",false
 "Pokemon SoulSilver (nds)",37,92,5,"rpg",false
 "New Super Mario Bros (nds)",7,89,5,"platform",true
 "Zelda link between worlds (3ds)",16,91,6,"action/adventure",false
 "Zelda majoras mask (3ds)",25,89,7,"action/adventure",false
-"Zelda Ocarina of time 3d (3ds)",25,94,9,"action/adventure",true
 "Super mario 3d land (3ds)",7,90,6,"platform",true
 "Shovel Knight (3ds)",7,90,7,"platform/action",false
 "Pokemon Omega Ruby (3ds)",26,83,5,"rpg",false
 "Metroid Samus Returns (3ds)",11,87,8,"metroidvania",false
+"Metroid Zero Mission (gba)",5,89,8,"metroidvania",true
+"Shotgun Mario 64 (N64 mod)",0,0,4,"platform",false
+"Undertale (pc)",7,92,10,"rpg",false
+"Final Fantasy VI (gba)",34,92,5,"rpg",true
+"Earthbound (snes)",28,0,8,"rpg",false
+"Chrono Trigger (snes)",23,92,7,"rpg",true
+"AC Unity (xbox)",17,72,4,"action/adventure",true
+"Zelda Ocarina of Time 3d (3ds)",25,94,9,"adventure",true
+"Dark Souls III (xbox)",32,90,9,"souls",true
+"Mass Effect (xbox)",17,91,4,"rpg",true
+"Paper Mario (n64)",23,93,5,"rpg",true
+"Doom (Series S)",12,87,6,"fps",true
 "Sonic Hedgehog 2 (mega drive)",2,85,4,"platform",true
 "Castlevania Symphony of the Knight (ps1)",9,93,8,"metroidvania",false
 "Final Fantasy VII (ps1)",37,90,10,"rpg",true
@@ -106,8 +104,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "God of War chains of olypus (psp)",6,91,7,"action/adventure",false
 "God of War ghost of sparta (psp)",7,90,7,"action/adventure",false
 "Crash twinsanity (ps2)",5,86,7,"platform",false
-"Devil May Cry 3 (ps2)",12,90,6,"action/adventure",false
-"Sea of Stars (xbox) - NOT OWNED GAMEPASS",28,91,9,"rpg",true
 "Bully (ps2)",15,87,6,"action/adventure",false
 "God Hand (ps2)",13,92,6,"action",false
 "Guitar Hero II (ps2)",9,92,7,"rythm",true
@@ -139,7 +135,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Metroid Prime (gamecube)",14,97,7,"action/adventure",false
 "Fire Emblem Awakening (3ds)",31,92,6,"rpg",false
 "Pokemon Ultra Sun (3ds)",33,84,4,"rpg",false
-"Zero Escape Virtues Last Reward (3ds)",28,88,6,"visual novel",false
 "SteamWorld Heist (3ds)",13,86,5,"rpg",false
 "Shantae and the Pirate's Curse (3ds)",8,86,6,"metroidvania",false
 "The Binding of Isaac: Rebirth (3ds)",6,88,4,"roguelike",false
@@ -148,7 +143,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Rayman 2: the great scape (ps2)",8,90,5,"platform",false
 "Xenoblade Chronicles (wii)",58,92,6,"rpg",false
 "Castlevania Bloodline (genesis)",3,0,5,"metroidvania",false
-"star fox assault (gamecube)",6,82,5,"action/adventure",false
 "Donkey Kong Return (3ds)",11,83,5,"platform",false
 "F Zero gx (gamecube)",9,89,5,"car/action",false
 "Eternal Darkness (gamecube)",13,92,7,"survival horror",false
@@ -175,7 +169,6 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Sakura Wars: So Long My Love (ps2)",22,85,5,"rpg/visual novel",false
 "Freekstyle (ps2)",0,82,6,"sports",false
 "Dark Cloud (ps2)",31,80,5,"rpg",false
-" Guilty Gear X (ps2)",0,79,7,"fighting",false
 "Baldur's Gate: Dark Alliance  (ps2)",12,87,6,"rpg",false
 "Armored Core 2 (ps2)",11,82,6,"action",false
 "Alien Hominid (ps2)",2,78,7,"side-scrolling shooter",false
@@ -189,8 +182,11 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Mario Tennis (n64)",8,91,5,"sports",false
 "Mario Power Tennis (gamecube)",4,84,5,"sports",false
 "Tales of Symphonia (gamecube)",47,89,5,"rpg",false
+"Star Fox Assault (gamecube)",6,82,5,"action/adventure",false
+"Zero Escape Virtue's Last Reward (3ds)",28,88,6,"visual novel",false
+"Devil May Cry 3 (ps2)",12,90,6,"action/adventure",false
+"Sea of Stars (xbox)",28,91,9,"rpg",true
 "P.N. 03 (gamecube)",3,93,8,"action/adventure",false
-"Resident Evil 2 (ps1)",6,90,7,"horror/shooting",false
 "Perfect Dark (n64)",9,97,4,"fps",false
 "I-Ninja (gamecube)",8,82,4,"platform/action",false
 "Conker's Bad Fur Day (n64)",11,92,5,"platform",false
@@ -221,5 +217,60 @@ Name,Length,Metacritic,Excitement,Genre,Played
 "Axiom Verge (pc)",11,89,8,"metroidvania",false
 "Bastion (pc)",6,90,7,"rpg",false
 "Post Void (pc)",2,83,8,"fps",false
-"Inside (pc)",4,93,10,"puzzle/platform",true
 "Vampire Survivors (pc)",13,95,8,"roguelike",false
+"Persona 2: Eternal Punishment (ps1)",49,83,7,"rpg",false
+"Guilty Gear X (ps2)",0,79,7,"fighting",false
+"Assassin's Creed Odyssey (Series S)",46,87,8,"rpg",true
+"Dead Space (360)",11,89,10,"horror/shooting",true
+"Red Dead Redemption (360)",18,95,10,"open world",true
+"Persona 3 FES (ps2)",80,89,6,"rpg",false
+"Grand Theft Auto V (Series S)",32,97,10,"open world",true
+"Persona 4 Golden (Series S)",68,93,7,"rpg",false
+"Jusant (Series S)",5,85,10,"platform",true
+"Cocoon (Series S)",5,90,10,"puzzle",true
+"The Witcher 3: Wild Hunt (Series S)",52,93,10,"rpg",true
+"Assassin's Creed II (Series S)",19,90,10,"action/adventure",true
+"Inside (pc)",4,93,10,"puzzle/platform",true
+"Elden Ring (Series S)",100,96,10,"rpg",true
+"Blasphemous (Series S)",14,82,10,"metroidvania",true
+"Dragon Age: Origins (360)",40,86,1,"rpg",true
+"A Way Out (Series S)",7,79,7,"puzzle/coop",true
+"Castlevania: Aria of Sorrow (GBA)",7,91,6,"metroidvania",false
+"Golden Sun",22,91,5,"rpg",false
+"Castlevania: Circle of the Moon (GBA)",9,91,5,"metroidvania",false
+"Mother 3 (GBA)",25,95,7,"rpg",false
+"Fire Emblem: The Sacred Stones (GBA)",25,89,5,"rpg",false
+"Fire Emblem (GBA)",27,90,7,"rpg",false
+"Ryse Son of Rome (Series S)",7,64,7,"action/adventure",true
+"JoJo's Bizarre Adventure: All-Star Battle R (Series S)",9,77,8,"fighting",true
+"Far Cry 3 - Blood Dragon (360)",4,84,7,"fps",true
+"Far Cry 3 (360)",16,91,10,"fps",true
+"Bioshock (360)",12,96,10,"fps",true
+"teste (teste)",2,2,2,"teste",true
+"Donkey Kong Country 3: Dixie Kong's Double Trouble (snes)",4,0,5,"platform",false
+"teste2 (teste)",2,3,3,"aaaaaaaaaaaaaa",true
+"Persona 5 Royal (Series S)",101,95,10,"rpg",false
+"The Messenger (xbox)",12,86,9,"side scrolling action",true
+"Donkey Kong Country 2: Diddy's Kong Quest (snes)",5,0,8,"platform",true
+"Spec Ops: The Line (360)",6,83,10,"third person shooter",true
+"Superliminal (Series S)",3,80,10,"puzzle",true
+"Mirror's Edge (360)",6,81,8,"platform",true
+"Pokemon HeartGold (NDS)",37,92,10,"rpg",true
+"Pokemon FireRed (GBA)",30,86,9,"rpg",true
+"Firewatch (Series S)",4,85,5,"walking simulator",true
+"Illusion of Gaia (snes)",13,0,7,"rpg",false
+"Soul Blazer (snes)",10,0,5,"rpg",false
+"Live-A-Live  (snes)",19,0,5,"rpg",false
+"Terranigma (snes)",16,0,5,"rpg",false
+"Front Mission: Gun Hazard (snes)",17,0,5,"side scrolling action",false
+"teste (teste)",10,50,5,"genero",true
+"Red Dead Redemption: Undead Nightmare (360)",7,87,10,"open world",true
+"Plague Tale: Requiem (Series S)",17,83,2,"stealth",true
+"Donkey Kong Country (snes)",4,0,6,"platform",true
+"Bramble The Mountain King (Series S)",5,83,7,"adventure/terror",true
+"teste3 (teste)",10,1,2,"rpg",true
+"Zelda Ocarina of time (3ds)",25,4,0,"adventure",false
+"Resident Evil 2 (Series S)",9,91,8,"horror/shooting",true
+"Super Mario Bros (NES)",5,0,7,"platform",false
+"Forza Motorsport (Series S)",33,84,8,"corrida",true
+"jogo (ps5)",10,10,5,"rpg",true
