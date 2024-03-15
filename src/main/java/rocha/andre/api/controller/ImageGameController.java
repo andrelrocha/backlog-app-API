@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import rocha.andre.api.domain.finished.DTO.FinishedReturnDTO;
+import rocha.andre.api.domain.imageGame.DTO.ImageGameIdDTO;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import rocha.andre.api.service.ImageGameService;
 
@@ -40,8 +41,12 @@ public class ImageGameController {
     }
 
     @GetMapping("/allgamesid")
-    public ResponseEntity<ArrayList<Long>> returnAllGameIds() {
-        var allId = imageGameService.returnAllIds();
+    public ResponseEntity<Page<ImageGameIdDTO>> returnAllGameIds(@RequestParam(defaultValue = "0") int page,
+                                                                 @RequestParam(defaultValue = "12") int size,
+                                                                 @RequestParam(defaultValue = "id") String sortField,
+                                                                 @RequestParam(defaultValue = "asc") String sortOrder) {
+        var pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.fromString(sortOrder), sortField));
+        var allId = imageGameService.returnAllIds(pageable);
         return ResponseEntity.ok(allId);
     }
 

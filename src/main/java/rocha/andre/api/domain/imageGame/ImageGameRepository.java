@@ -4,6 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import rocha.andre.api.domain.imageGame.DTO.ImageGameIdDTO;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import rocha.andre.api.domain.playingGame.PlayingGame;
 
@@ -16,10 +17,10 @@ public interface ImageGameRepository  extends JpaRepository<ImageGame, Long> {
     ImageGame findImageGameByGameId(long game_id);
 
     @Query("""
-            SELECT ig.game.id FROM ImageGame ig
-            ORDER BY ig.game.name
-            """)
-    ArrayList<Long> findAllGameIdsOrderedByName();
+        SELECT ig.game.id FROM ImageGame ig
+        ORDER BY ig.game.name
+    """)
+    Page<Long> findAllGameIdsOrderedByName(Pageable pageable);
 
     @Query("""
             SELECT ig FROM ImageGame ig

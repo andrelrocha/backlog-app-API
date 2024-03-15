@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameDTO;
+import rocha.andre.api.domain.imageGame.DTO.ImageGameIdDTO;
 import rocha.andre.api.domain.imageGame.DTO.ImageGameReturnDTO;
 import rocha.andre.api.domain.imageGame.useCase.AddImageGame;
 import rocha.andre.api.domain.imageGame.useCase.ReturnAllImageGamesID;
@@ -41,8 +42,8 @@ public class ImageGameServiceImpl implements ImageGameService {
     }
 
     @Override
-    public ArrayList<Long> returnAllIds() {
-        var allId = returnAllImageGamesID.returnAllIds();
+    public Page<ImageGameIdDTO> returnAllIds(Pageable pageable) {
+        var allId = returnAllImageGamesID.returnAllIds(pageable);
         return allId;
     }
 
